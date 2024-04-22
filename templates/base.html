@@ -1,0 +1,82 @@
+{% load static %}
+{% url 'home' as home_url %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags for search engines-->
+    <meta name="description"
+        content="Blush Bakes by Rach | Recipe Blog. Sharing recipes for celebratory cakes and other sweet treats.">
+    <meta name="keywords"
+        content="blush bakes by rach, recipes, baking blog, recipe blog, cake maker, cake artist, baker, cakes, biscuits, cupcakes, brownies, hurstpierpoint, sussex">
+    <title>Blush Bakes by Rach | Recipe Blog</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <link rel="icon" type="image/png" sizes="16x16" href="#">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <!-- Header section with Logo and Navigation -->
+    <header>
+        <a href="index.html">
+            <img class="header-logo" src="#" width="120" height="120"
+                alt="Blush Bakes by Rach logo consisting of a pink and gold brushstroke circle with Blush Bakes by Rach in a script typeface in the middle">
+        </a>
+        <h1 class="hidden-heading">Blush Bakes by Rach | Recipe Blog</h1>
+        <input type="checkbox" id="nav-toggle" name="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <i class="fa-solid fa-bars"></i></label>
+        <nav>
+            <ul id="menu" aria-label="Menu with links to internal pages">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+
+        {% block content %}
+        <!-- Main content to go here -->
+        {% endblock content %}
+
+    </main>
+
+    <!-- Back to top -->
+    <a href="#top" id="return-to-top" class="top" aria-label="An icon to take you back to the top of the page"><i
+            class="fa-regular fa-circle-up fa-lg"></i></a>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <ul id="social-media">
+            <li><a href="https://www.facebook.com/blushbakesbyrach" target="_blank" rel="noopener"
+                    aria-label="Follow me on Facebook (opens in a new tab)">
+                    <i class="fa-brands fa-facebook" title="Follow me on Facebook"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/blushbakesbyrach/" target="_blank" rel="noopener"
+                    aria-label="Follow me on Instagram (opens in a new tab)">
+                    <i class="fa-brands fa-instagram" title="Follow me on Instagram"></i></a>
+            </li>
+            <li><a href="#" target="_blank" rel="noopener"
+                    aria-label="Get in touch (takes you to contact page)">
+                    <i class="fa-solid fa-envelope" title="Get in touch"></i></a>
+            </li>
+        </ul>
+    </footer>
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/c2f2557f2c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
