@@ -7,6 +7,9 @@
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
+        <div id="title">
+            <h2>Popular Recipes</h2>
+        </div>
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
@@ -27,9 +30,9 @@
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.excerpt }}</p>
+                            <a href="#">
+                                <h2 class="recipe-title">{{ recipe.title }}</h2>
+                                <p>{{ recipe.excerpt }}</p>
                             </a>
 
                             <hr />
@@ -43,7 +46,6 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -63,7 +65,3 @@
 
 <!-- index.html content ends here -->
 {% endblock %}
-
-{% block copyright %}
-    Copyright 2024 Blush Bakes by Rach
-{% endblock copyright %}
