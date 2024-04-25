@@ -26,20 +26,22 @@ a:hover {
     color: #9e7105;
 }
 
-/* Back to top styling */
-.top {
-    position: sticky;
-    bottom: 20px;
-    --offset: 10px;
-    margin-top: calc(100vh + var(--offset));
-    margin-right: 20px;
-    place-self: end;
+/* Back to top button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #4a474e;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    z-index: 99;
 }
 
-/* Back to top button */
-#return-to-top {
-    font-size: 1rem;
-    color: #4a474e;
+#back-to-top:hover {
+    color: #9e7105;
 }
 
 h1,
