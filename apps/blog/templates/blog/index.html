@@ -19,21 +19,18 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <!-- {% if "placeholder" in post.featured_image.url %}
+                                {% if "placeholder" in recipe.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }} "
-                                    alt="{{ post.title }}">
-                                {% endif %} -->
-                                <div class="image-flash">
-                                </div>
+                                <img class="card-img-top" src=" {{ recipe.featured_image.url }} "
+                                    alt="{{ recipe.title }}">
+                                {% endif %}
                             </div>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
+                            <a href="{% url 'recipe_detail' recipe.slug %}">
                                 <h2 class="recipe-title">{{ recipe.title }}</h2>
                                 <p>{{ recipe.excerpt }}</p>
                             </a>
-
                             <hr />
                             <p class="author h6 posted-by">Posted by: {{ recipe.author }}</p>
                             <p class="card-text h6 posted-by">{{ recipe.created_on|date:"j F Y, g:i a" }}

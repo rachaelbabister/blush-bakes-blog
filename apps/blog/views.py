@@ -24,10 +24,10 @@ def recipe_detail(request, slug):
     """
 
     queryset = Recipe.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    recipe = get_object_or_404(queryset, slug=slug)
 
     return render(
         request,
         "blog/recipe_detail.html",
-        {"post": recipe},
+        {"recipe": recipe},
     )

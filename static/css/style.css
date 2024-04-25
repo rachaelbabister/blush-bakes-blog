@@ -184,6 +184,63 @@ main {
     background-color: #f7e6de;
 }
 
+/* Recipe Detail Page */
+
+/* Recipe image and title */
+
+.main-title {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.main-title-text {
+    background-color: #f7e6de;
+    color: #4a474e;
+    position: relative;
+}
+
+.main-title-text h1 {
+    font-size: 3em;
+    margin-top: 10%;
+}
+
+.main-title-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-title-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #f7e6de;
+    z-index: 100;
+}
+
+.post-title,
+.post-excerpt {
+    margin-left: 5%;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: #9e7105;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
 /* ****Background Image with Enquire Button
 #enquire-bg {
     background: url("number90cake.webp") no-repeat left center/cover;
