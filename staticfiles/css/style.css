@@ -184,13 +184,13 @@ main {
     background-color: #f7e6de;
 }
 
-/* Background Image with Enquire Button */
+/* ****Background Image with Enquire Button
 #enquire-bg {
     background: url("number90cake.webp") no-repeat left center/cover;
     width: 100%;
     height: 200px;
     display: flex;
-    /* Background colour if image doesn't load */
+    ****Background colour if image doesn't load
     background-color: #f7e6de;
 }
 
@@ -221,7 +221,7 @@ main {
     background-color: #f7e6de;
     color: #4a474e;
     border: 1px solid #4a474e;
-}
+} */
 
 /* Contact page */
 /* Contact header image */
@@ -331,10 +331,10 @@ input[type=checkbox] {
 }
 
 /* Thank you page */
-.thankyou {
+/* .thankyou {
     font-size: 120%;
     text-align: center;
-}
+} */
 
 /* Footer Section */
 #footer {

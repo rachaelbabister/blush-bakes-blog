@@ -29,7 +29,7 @@
                                 <div class="image-flash">
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
                                 <h2 class="recipe-title">{{ recipe.title }}</h2>
                                 <p>{{ recipe.excerpt }}</p>
                             </a>
