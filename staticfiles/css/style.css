@@ -15,24 +15,33 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    display: grid;
-    grid-template-columns: auto 0px;
 }
 
-/* Back to top styling */
-.top {
-    position: sticky;
-    bottom: 20px;
-    --offset: 10px;
-    margin-top: calc(100vh + var(--offset));
-    margin-right: 20px;
-    place-self: end;
+a {
+    text-decoration: none;
+    color: #4a474e;
+}
+
+a:hover {
+    color: #9e7105;
 }
 
 /* Back to top button */
-#return-to-top {
-    font-size: 3rem;
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    font-size: 1.5rem;
     color: #4a474e;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    z-index: 99;
+}
+
+#back-to-top:hover {
+    color: #9e7105;
 }
 
 h1,
@@ -46,9 +55,19 @@ h6 {
     text-align: center;
 }
 
-/* Enable elements to be hidden but still found by search engines */
-.hidden-heading {
-    display: none;
+/* Headings & Titles */
+#title h2 {
+    text-transform: uppercase;
+    font-size: 180%;
+    font-weight: bolder;
+    color: #9e7105;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+.recipe-title {
+    color: #4a474e;
+    text-align: left;
 }
 
 /* Header */
@@ -112,11 +131,11 @@ nav {
 
 .nav-toggle-label {
     font-size: 2rem;
-}
+} 
 
 /* Main content */
 main {
-    margin-top: 143.5px;
+    margin-top: 140px;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -124,9 +143,9 @@ main {
 
 /* Hero styles */
 #hero {
-    height: 400px;
+    height: 200px;
     width: 100%;
-    background: url("treatbox-home.webp") no-repeat left center/cover;
+    background: url('/static/images/treatbox-home.webp') no-repeat left center/cover;
     position: relative;
     /* Background colour if image doesn't load */
     background-color: #9e7105;
@@ -364,7 +383,6 @@ input[type=checkbox] {
         width: 550px;
         height: 150px;
         right: 40px;
-        bottom: 180px;
     }
 
     #hero-text h2 {
