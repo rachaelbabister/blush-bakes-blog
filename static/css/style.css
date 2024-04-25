@@ -26,24 +26,6 @@ a:hover {
     color: #9e7105;
 }
 
-/* Back to top button */
-#back-to-top {
-    display: none;
-    position: fixed;
-    bottom: 40px;
-    right: 20px;
-    font-size: 1.5rem;
-    color: #4a474e;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    z-index: 99;
-}
-
-#back-to-top:hover {
-    color: #9e7105;
-}
-
 h1,
 h2,
 h3,
@@ -68,7 +50,14 @@ h6 {
 .recipe-title {
     color: #4a474e;
     text-align: left;
+    font-size: 180%;
 }
+
+.posted-by {
+    font-size: 80%;
+    color: #c5af7b;
+}
+
 
 /* Header */
 header {
@@ -110,7 +99,7 @@ header a {
 }
 
 /* Navbar styles */
-nav {
+.nav-main {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
@@ -133,6 +122,22 @@ nav {
     font-size: 2rem;
 } 
 
+/* Back to top button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #4a474e;
+    border-radius: 50px;
+    border: none;
+}
+
+#back-to-top:hover {
+    color: #9e7105;
+}
+
 /* Main content */
 main {
     margin-top: 140px;
@@ -152,7 +157,6 @@ main {
 }
 
 #hero-text {
-    font-size: 180%;
     position: absolute;
     width: 80%;
     bottom: 10px;
@@ -160,6 +164,7 @@ main {
 }
 
 #hero-text h2 {
+    font-size: 245%;
     text-align: left;
     font-weight: lighter;
     position: absolute;
@@ -167,6 +172,16 @@ main {
     padding: 10px;
     display: block;
     background-color: rgba(253, 247, 242, .8);
+}
+
+/* Next & Previous Buttons */
+.page-buttons {
+    color: #9e7105;
+}
+
+.page-buttons:hover {
+    color: #4a474e;
+    background-color: #f7e6de;
 }
 
 /* Background Image with Enquire Button */
@@ -328,10 +343,11 @@ input[type=checkbox] {
 
 #social-media {
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     list-style-type: none;
+    gap: 30px;
 }
 
 #social-media i {
@@ -343,6 +359,10 @@ input[type=checkbox] {
 
 #social-media i:hover {
     color: #9e7105;
+}
+
+.copyright {
+    font-size: 80%;
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -359,7 +379,7 @@ input[type=checkbox] {
     }
 
     /* Navbar */
-    nav {
+    .nav-main {
         display: block;
         position: relative;
         width: fit-content;

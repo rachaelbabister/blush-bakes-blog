@@ -27,7 +27,6 @@
                                     alt="{{ post.title }}">
                                 {% endif %} -->
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                             </div>
                             <a href="#">
@@ -36,7 +35,8 @@
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ recipe.created_on}}
+                            <p class="author h6 posted-by">Posted by: {{ recipe.author }}</p>
+                            <p class="card-text h6 posted-by">{{ recipe.created_on|date:"j F Y, g:i a" }}
                             </p>
                         </div>
                     </div>
@@ -53,10 +53,10 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo; PREV</a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link page-buttons"> &laquo; PREV</a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link page-buttons"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

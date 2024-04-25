@@ -35,7 +35,7 @@
         <input type="checkbox" id="nav-toggle" name="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
             <i class="fa-solid fa-bars"></i></label>
-        <nav>
+        <nav class="nav-main">
             <ul id="menu" aria-label="Menu with links to internal pages">
                 <li><a href="{% url 'home' %}" class="active">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -68,6 +68,7 @@
 
     <!-- Footer Section -->
     <footer id="footer">
+        <p class="py-3 text-center">Follow us on Social Media:</p>
         <ul id="social-media">
             <li><a href="https://www.facebook.com/blushbakesbyrach" target="_blank" rel="noopener"
                     aria-label="Follow me on Facebook (opens in a new tab)">
@@ -82,6 +83,11 @@
                     <i class="fa-solid fa-envelope" title="Get in touch"></i></a>
             </li>
         </ul>
+        <p class="py-3 text-center copyright">
+            {% block copyright %} 
+                Built by Rachael Babister for educational purposes only | 2024
+            {% endblock copyright %}
+        </p>
     </footer>
     <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/c2f2557f2c.js" crossorigin="anonymous"></script>
