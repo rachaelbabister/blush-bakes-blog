@@ -188,6 +188,10 @@ main {
 
 /* Recipe image and title */
 
+.image-container {
+    position: relative;
+}
+
 .main-title {
     margin-top: 10px;
     overflow: hidden;
