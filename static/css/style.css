@@ -51,6 +51,7 @@ h6 {
     color: #4a474e;
     text-align: left;
     font-size: 180%;
+    margin-top: 10px;
 }
 
 .posted-by {
@@ -174,9 +175,16 @@ main {
     background-color: rgba(253, 247, 242, .8);
 }
 
-/* Next & Previous Buttons */
+/* Next, Previous & Back Buttons */
 .page-buttons {
-    color: #9e7105;
+    color: #ffffff;
+    background-color: #c5af7b;
+    letter-spacing: 2px;
+    border: none;
+    transition-duration: 0.5s;
+    margin-bottom: 20px;
+    padding: .325rem .50rem;
+    font-size: 80%;
 }
 
 .page-buttons:hover {
@@ -185,47 +193,50 @@ main {
 }
 
 /* Recipe Detail Page */
-
 /* Recipe image and title */
 
 .image-container {
     position: relative;
 }
 
-.main-title {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
+.image-width {
     width: 100%;
 }
 
-.main-title-text {
+.image-hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.image-hover:hover {
+    opacity: 0.8;
+}
+
+.card {
+    border: none;
+}
+
+.main-title {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.main-title-box {
     background-color: #f7e6de;
     color: #4a474e;
     position: relative;
 }
 
-.main-title-text h1 {
+.main-title-box h1 {
     font-size: 3em;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .main-title-image {
     position: relative;
     overflow: hidden;
-}
-
-.main-title-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #f7e6de;
-    z-index: 100;
 }
 
 .post-title,
@@ -244,45 +255,6 @@ main {
     width: 100%;
     height: auto;
 }
-
-/* ****Background Image with Enquire Button
-#enquire-bg {
-    background: url("number90cake.webp") no-repeat left center/cover;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    ****Background colour if image doesn't load
-    background-color: #f7e6de;
-}
-
-.enquire-opacity {
-    background-color: rgba(253, 247, 242, 0.2);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-button {
-    text-transform: uppercase;
-    font-family: 'Reenie Beanie', cursive;
-    background-color: #4a474e;
-    color: #f7e6de;
-    border: 1px solid #f7e6de;
-    font-size: 150%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    transition-duration: 0.5s;
-}
-
-.contact-button:hover {
-    background-color: #f7e6de;
-    color: #4a474e;
-    border: 1px solid #4a474e;
-} */
 
 /* Contact page */
 /* Contact header image */
@@ -376,7 +348,7 @@ input[type=checkbox] {
     letter-spacing: 2px;
     background-color: #4a474e;
     color: #f7e6de;
-    border: 1px solid #f7e6de;
+    border: none;
     font-size: 130%;
     text-align: center;
     width: 90px;
@@ -388,7 +360,6 @@ input[type=checkbox] {
 .send-button:hover {
     background-color: #f7e6de;
     color: #4a474e;
-    border: 1px solid #4a474e;
 }
 
 /* Thank you page */

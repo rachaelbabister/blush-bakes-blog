@@ -1,15 +1,16 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 
 <div class="main-title">
     <div class="container">
+        <button onclick="goBack()" class="page-buttons">&laquo; Back to previous page</button>
         <div class="row g-0">
-            <div class="d-none d-md-block col-md-6 main-title-image">
+            <div class="col-md-6 main-title-image">
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
             </div>
-            <div class="col-md-6 main-title-text">
+            <div class="col-md-6 main-title-box">
                 <h1 class="post-title">{{ recipe.title }}</h1>
                 <p class="post-excerpt">{{ recipe.excerpt }}</p>
                 <p class="post-subtitle">{{ recipe.author }} | {{ recipe.created_on }}</p>

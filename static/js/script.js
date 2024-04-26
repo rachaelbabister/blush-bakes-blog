@@ -15,3 +15,8 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// Back to previous page button
+function goBack() {
+    window.history.back();
+}

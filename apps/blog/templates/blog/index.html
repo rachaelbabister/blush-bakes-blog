@@ -18,13 +18,15 @@
                 <div class="col-md-4">
                     <div class="mb-4">
                         <div class="card-body">
-                            <div class="image-container">
+                            <div class="image-container image-hover">
                                 {% if "placeholder" in recipe.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                    alt="placeholder image">
+                                <a href="{% url 'recipe_detail' recipe.slug %}">
+                                <img class="image-width" src="{% static 'images/default.jpg' %}"
+                                    alt="placeholder image"></a>
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.featured_image.url }} "
-                                    alt="{{ recipe.title }}">
+                                <a href="{% url 'recipe_detail' recipe.slug %}">
+                                <img class="image-width" src=" {{ recipe.featured_image.url }} "
+                                    alt="{{ recipe.title }}"></a>
                                 {% endif %}
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug %}">
