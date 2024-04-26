@@ -8,7 +8,13 @@
         <button onclick="goBack()" class="page-buttons">&laquo; Back to previous page</button>
         <div class="row g-0">
             <div class="col-md-6 main-title-image">
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                {% if "placeholder" in recipe.featured_image.url %}
+                <img class="image-width" src="{% static 'images/default.jpg' %}" 
+                    alt="placeholder image"></a>
+                {% else %}
+                <img class="image-width" src=" {{ recipe.featured_image.url }} " 
+                    alt="{{ recipe.title }}"></a>
+                {% endif %}
             </div>
             <div class="col-md-6 main-title-box">
                 <h1 class="post-title">{{ recipe.title }}</h1>
