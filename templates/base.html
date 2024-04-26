@@ -1,5 +1,10 @@
 {% load static %}
+
 {% url 'home' as home_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +23,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -26,8 +31,52 @@
 
 <body>
     <!-- Header section with Logo and Navigation -->
+    <header class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img class="header-logo" src="{% static 'images/header-logo.webp' %}" width="120" height="120"
+                alt="Blush Bakes by Rach logo">
+        </a>
 
-    <header>
+        <!-- Navbar toggler for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Menu with links to internal pages">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == home_url %}active{% endif %}"
+                        href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Authentication-related links -->
+            <ul class="navbar-nav">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+
+    <!-- <header>
         <a href="{% url 'home' %}">
             <img class="header-logo" src="{% static 'images/header-logo.webp' %}" width="120" height="120"
                 alt="Blush Bakes by Rach logo">
@@ -42,13 +91,13 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
     <!-- Main Section -->
     <main>
         <!-- Hero Image & Text Overlay -->
         <section id="hero"
-        aria-label="One treat box containing biscuits and cakes and another box of cupcakes, all decorated in blush pink">
+            aria-label="One treat box containing biscuits and cakes and another box of cupcakes, all decorated in blush pink">
             <div id="hero-text">
                 <h2>
                     Tasty Baking Recipes
@@ -64,7 +113,8 @@
     </main>
 
     <!-- Back to top -->
-    <button onclick="topFunction()" id="back-to-top" class="fa solid fa-circle-up" aria-label="Back to the top of the page"></button>
+    <button onclick="topFunction()" id="back-to-top" class="fa solid fa-circle-up"
+        aria-label="Back to the top of the page"></button>
 
     <!-- Footer Section -->
     <footer id="footer">
@@ -78,22 +128,24 @@
                     aria-label="Follow me on Instagram (opens in a new tab)">
                     <i class="fa-brands fa-instagram" title="Follow me on Instagram"></i></a>
             </li>
-            <li><a href="#" target="_blank" rel="noopener"
-                    aria-label="Get in touch (takes you to contact page)">
+            <li><a href="#" target="_blank" rel="noopener" aria-label="Get in touch (takes you to contact page)">
                     <i class="fa-solid fa-envelope" title="Get in touch"></i></a>
             </li>
         </ul>
         <p class="py-3 text-center copyright">
-            {% block copyright %} 
-                Built by Rachael Babister for educational purposes only | 2024
+            {% block copyright %}
+            Built by Rachael Babister for educational purposes only | 2024
             {% endblock copyright %}
         </p>
     </footer>
     <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/c2f2557f2c.js" crossorigin="anonymous"></script>
 
-    <!-- JavaScript Link -->
+    <!-- JavaScript Links -->
     <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
 
 </body>
 
