@@ -363,6 +363,17 @@ input[type=checkbox] {
     text-align: center;
 } */
 
+/* Sign Up, Create Account & Logout styles */
+
+.account-center {
+    text-align: center;
+}
+
+.account-center h3 {
+    font-size: 245%;
+    color: #9e7105;
+}
+
 /* Footer Section */
 #footer {
     background-color: #f7e6de;
