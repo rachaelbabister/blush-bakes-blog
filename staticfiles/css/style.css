@@ -251,6 +251,13 @@ main {
     height: auto;
 }
 
+/* Logged in and Account style */
+
+.hello {
+    color: #9e7105;
+    font-weight: bolder;
+}
+
 /* Contact page */
 /* Contact header image */
 #contact-image {

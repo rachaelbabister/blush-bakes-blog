@@ -37,7 +37,7 @@
                 alt="Blush Bakes by Rach logo">
         </a>
 
-        <!-- Navbar toggler for mobile -->
+        <!-- Navbar toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
             aria-controls="navbarContent" aria-expanded="false" aria-label="Menu with links to internal pages">
             <span class="navbar-toggler-icon"></span>
@@ -59,21 +59,26 @@
             </ul>
 
             <!-- Authentication-related links -->
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
                 </li>
                 {% endif %}
             </ul>
         </div>
+        {% if user.is_authenticated %}
+        <div class="flex-shrink-0 ms-3">
+            <p class="hello m-3">Hello {{ user }}</p>
+        </div>
+        {% endif %}
     </header>
 
     <!-- Main Section -->

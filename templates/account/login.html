@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% load i18n %}
-{% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -10,11 +9,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2 account-center">
-      <h3>{% trans "Login" %}</h3>
+      <h3>{% trans "Sign In" %}</h3>
 
       <p>{% blocktrans %}Hello from Blush Bakes by Rach! <br>
         If you would like to join in with the baking community and
-        leave a comment on our recipes, you'll need to login below. If you don't have an account yet, please <a href="{{ signup_url }}"><strong>create one here</strong></a>.
+        leave a comment on our recipes, you'll need to sign in below. If you don't have an account yet, please <a href="{{ signup_url }}"><strong>create one here</strong></a>.
         {% endblocktrans %}</p>
     </div>
   </div>
@@ -26,9 +25,10 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="page-buttons" type="submit">{% trans "Login" %}</button>
+        <button class="page-buttons" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>
 </div>
+
 {% endblock %}
