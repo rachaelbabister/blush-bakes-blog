@@ -12,6 +12,9 @@ DIFFICULTY_CHOICES = [
 # Create your models here.
 
 class Recipe(models.Model):
+    """
+    Stores a single blog post entry related to a user.
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=205, unique=True)
     author = models.ForeignKey(
@@ -29,3 +32,23 @@ class Recipe(models.Model):
 
     def __str__(self):
         return f"{self.title}. Added by {self.author}"
+
+
+class Comment(models.Model):
+    """
+    Stores a single comment entry related to a recipe and user.
+    """
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter"
+    )
+    content = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"{self.content} by {self.author}"
