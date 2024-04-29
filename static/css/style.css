@@ -263,11 +263,31 @@ main {
     height: auto;
 }
 
-/* Logged in and Account style */
-
+/* Sign Up, Logout & Account styles */
 .hello {
     color: #9e7105;
     font-weight: bolder;
+}
+
+.account-center {
+    text-align: center;
+}
+
+.account-center h3 {
+    font-size: 245%;
+    color: #9e7105;
+}
+
+.sign-up {
+    color: #4a474e;
+    background-color: rgba(205, 172, 93, .5);
+    padding: 20px 15px 0px 10px;
+    margin-bottom: 30px;
+}
+
+.help-text ul {
+    font-size: 70%;
+    list-style-type: none;
 }
 
 /* Contact page */
@@ -382,16 +402,6 @@ input[type=checkbox] {
     text-align: center;
 } */
 
-/* Sign Up, Create Account & Logout styles */
-
-.account-center {
-    text-align: center;
-}
-
-.account-center h3 {
-    font-size: 245%;
-    color: #9e7105;
-}
 
 /* Footer Section */
 #footer {

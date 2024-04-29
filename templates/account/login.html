@@ -8,17 +8,18 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2 account-center">
+    <div class="col-md-6 offset-md-3 account-center">
       <h3>{% trans "Sign In" %}</h3>
 
-      <p>{% blocktrans %}Hello from Blush Bakes by Rach! <br>
-        If you would like to join in with the baking community and
-        leave a comment on our recipes, you'll need to sign in below. If you don't have an account yet, please <a href="{{ signup_url }}"><strong>create one here</strong></a>.
+      <p>{% blocktrans %}
+        If you would like to join in with the baking community and leave a comment on our recipes, you'll need to sign
+        in below. If you don't have an account yet, please <a href="{{ signup_url }}"><strong>create one
+            here</strong></a>.
         {% endblocktrans %}</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2 account-center">
+    <div class="col-md-6 offset-md-3 account-center">
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
