@@ -263,6 +263,20 @@ main {
     height: auto;
 }
 
+.difficulty-rating {
+    float: right;
+    font-style: italic;
+    color: #9e7105;
+    font-size: 80%;
+    padding-top: 10px;
+}
+
+.difficulty-rating-2 {
+    font-style: italic;
+    color: #9e7105;
+    margin-left: 5%;
+}
+
 /* Sign Up, Logout & Account styles */
 .hello {
     color: #9e7105;
