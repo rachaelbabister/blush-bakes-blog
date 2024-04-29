@@ -34,7 +34,7 @@ h5,
 h6 {
     font-family: 'Reenie Beanie', cursive;
     color: #4A474E;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* Headings & Titles */
@@ -45,6 +45,7 @@ h6 {
     color: #9e7105;
     letter-spacing: 2px;
     margin-top: 30px;
+    text-align: center;
 }
 
 .recipe-title {
@@ -53,12 +54,6 @@ h6 {
     font-size: 180%;
     margin-top: 10px;
 }
-
-.posted-by {
-    font-size: 80%;
-    color: #c5af7b;
-}
-
 
 /* Header */
 header {
@@ -302,6 +297,41 @@ main {
 .help-text ul {
     font-size: 70%;
     list-style-type: none;
+}
+
+.posted-by {
+    color: #c5af7b;
+    font-weight: normal;
+    font-size: 80%;
+}
+
+/* Comments */
+
+.count {
+    color: #9e7105;
+    font-size: 80%;
+}
+
+.comment-by {
+    color: #c5af7b;
+    font-weight: normal;
+}
+
+.comment-by-bold {
+    font-size: 80%;
+    color: #c5af7b;
+    font-weight: bolder;
+}
+
+.approval {
+    font-style: italic;
+    color: #c5af7b;
+    font-size: 80%;
+}
+
+.approval-alert {
+    background-color: #f7e6de;
+    margin-top: 15px;
 }
 
 /* Contact page */

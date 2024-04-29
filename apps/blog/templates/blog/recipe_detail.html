@@ -1,19 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-
+<!-- Recipe Image & Title -->
 <div class="main-title">
     <div class="container">
         <button onclick="goBack()" class="page-buttons">&laquo; Back to previous page</button>
         <div class="row g-0">
             <div class="col-md-6 main-title-image">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img class="image-width" src="{% static 'images/default.jpg' %}" 
-                    alt="placeholder image"></a>
+                <img class="image-width" src="{% static 'images/default.jpg' %}" alt="placeholder image"></a>
                 {% else %}
-                <img class="image-width" src=" {{ recipe.featured_image.url }} " 
-                    alt="{{ recipe.title }}"></a>
+                <img class="image-width" src=" {{ recipe.featured_image.url }} " alt="{{ recipe.title }}"></a>
                 {% endif %}
             </div>
             <div class="col-md-6 main-title-box">
@@ -25,7 +24,7 @@
         </div>
     </div>
 </div>
-
+<!-- Recipe Content -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
@@ -36,6 +35,54 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-8 card">
+            <hr>
+            <!-- Displaying Comments & Count -->
+            <h2><span class="count"><i class="far fa-comments"></i></span> {{ comment_count }} Comments:</h2>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div
+                    class="comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="comment-by-bold">
+                        {{ comment.author }}
+                        <span class="comment-by">
+                            on {{ comment.created_on }}
+                        </span> said:
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.content | linebreaks }}
+                    </div>
+                    {% if not comment.approved and comment.author == user %}
+                    <p class="approval">Your comment above is waiting to be approved</p>
+                    {% endif %}
+                    <hr>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Creating New Comments -->
+            <div class="col-md-8">
+                <div class="card-body">
+                    {% if user.is_authenticated %}
+                    <h2>Leave a comment:</h2>
+                    <p class="comment-by-bold">Signed in as: {{ user.username }}</p>
+                    <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button id="submitButton" type="submit" class="page-buttons">Submit</button>
+                    </form>
+                    {% else %}
+                    <p>Please <a href="{{ login_url }}"><strong>sign in</strong></a> to leave a comment</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+</div>
+
+<!-- JavaScript Links -->
+<script src="{% static 'js/script.js' %}"></script>
 
 {% endblock content %}

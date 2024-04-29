@@ -31,17 +31,17 @@
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug %}">
                                 <div class="row">
-                                    <div class="col-9">
+                                    <div class="col-8">
                                         <h2 class="recipe-title">{{ recipe.title }}</h2>
                                     </div>
-                                    <div class="col-3 text-right">
+                                    <div class="col-4 text-right">
                                         <p class="difficulty-rating">Rated: {{ recipe.difficulty_rating }}</p>
                                     </div>
                                 </div>
                                 <p>{{ recipe.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="author h6 posted-by">Posted by: {{ recipe.author }}</p>
+                            <p class="h6 posted-by">Posted by: {{ recipe.author }}</p>
                             <p class="card-text h6 posted-by">{{ recipe.created_on|date:"j F Y, g:i a" }}
                             </p>
                         </div>
