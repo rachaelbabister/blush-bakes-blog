@@ -165,8 +165,9 @@ main {
     background-color: rgba(253, 247, 242, .8);
 }
 
-/* Next, Previous & Back Buttons */
-.page-buttons {
+/* Next, Previous & Back Buttons - and Edit Comment button */
+.page-buttons,
+.edit-button {
     color: #ffffff;
     background-color: #c5af7b;
     letter-spacing: 2px;
@@ -177,7 +178,8 @@ main {
     font-size: 80%;
 }
 
-.page-buttons:hover {
+.page-buttons:hover,
+.edit-button:hover {
     color: #4a474e;
     background-color: #f7e6de;
 }
@@ -329,9 +331,28 @@ main {
     font-size: 80%;
 }
 
+.not-approved {
+    color: #a4a3a6;
+}
+
 .approval-alert {
     background-color: #f7e6de;
     margin-top: 15px;
+}
+
+.delete-button {
+    color: #ffffff;
+    background-color: #4a474e;
+    letter-spacing: 2px;
+    border: none;
+    transition-duration: 0.5s;
+    margin-bottom: 20px;
+    padding: .325rem .50rem;
+    font-size: 80%;
+}
+
+.delete-button:hover {
+    background-color: #9e7105;
 }
 
 /* Contact page */

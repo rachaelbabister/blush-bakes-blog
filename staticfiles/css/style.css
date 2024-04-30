@@ -34,7 +34,7 @@ h5,
 h6 {
     font-family: 'Reenie Beanie', cursive;
     color: #4A474E;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* Headings & Titles */
@@ -45,6 +45,7 @@ h6 {
     color: #9e7105;
     letter-spacing: 2px;
     margin-top: 30px;
+    text-align: center;
 }
 
 .recipe-title {
@@ -53,12 +54,6 @@ h6 {
     font-size: 180%;
     margin-top: 10px;
 }
-
-.posted-by {
-    font-size: 80%;
-    color: #c5af7b;
-}
-
 
 /* Header */
 header {
@@ -170,8 +165,9 @@ main {
     background-color: rgba(253, 247, 242, .8);
 }
 
-/* Next, Previous & Back Buttons */
-.page-buttons {
+/* Next, Previous & Back Buttons - and Edit Comment button */
+.page-buttons,
+.edit-button {
     color: #ffffff;
     background-color: #c5af7b;
     letter-spacing: 2px;
@@ -182,7 +178,8 @@ main {
     font-size: 80%;
 }
 
-.page-buttons:hover {
+.page-buttons:hover,
+.edit-button:hover {
     color: #4a474e;
     background-color: #f7e6de;
 }
@@ -302,6 +299,60 @@ main {
 .help-text ul {
     font-size: 70%;
     list-style-type: none;
+}
+
+.posted-by {
+    color: #c5af7b;
+    font-weight: normal;
+    font-size: 80%;
+}
+
+/* Comments */
+
+.count {
+    color: #9e7105;
+    font-size: 80%;
+}
+
+.comment-by {
+    color: #c5af7b;
+    font-weight: normal;
+}
+
+.comment-by-bold {
+    font-size: 80%;
+    color: #c5af7b;
+    font-weight: bolder;
+}
+
+.approval {
+    font-style: italic;
+    color: #c5af7b;
+    font-size: 80%;
+}
+
+.not-approved {
+    color: #a4a3a6;
+}
+
+.approval-alert {
+    background-color: #f7e6de;
+    margin-top: 15px;
+}
+
+.delete-button {
+    color: #ffffff;
+    background-color: #4a474e;
+    letter-spacing: 2px;
+    border: none;
+    transition-duration: 0.5s;
+    margin-bottom: 20px;
+    padding: .325rem .50rem;
+    font-size: 80%;
+}
+
+.delete-button:hover {
+    background-color: #9e7105;
 }
 
 /* Contact page */

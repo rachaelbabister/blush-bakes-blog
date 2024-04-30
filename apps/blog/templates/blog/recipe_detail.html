@@ -10,9 +10,9 @@
         <div class="row g-0">
             <div class="col-md-6 main-title-image">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img class="image-width" src="{% static 'images/default.jpg' %}" alt="placeholder image"></a>
+                <img class="image-width" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                 {% else %}
-                <img class="image-width" src=" {{ recipe.featured_image.url }} " alt="{{ recipe.title }}"></a>
+                <img class="image-width" src=" {{ recipe.featured_image.url }} " alt="{{ recipe.title }}">
                 {% endif %}
             </div>
             <div class="col-md-6 main-title-box">
@@ -56,6 +56,10 @@
                     {% if not comment.approved and comment.author == user %}
                     <p class="approval">Your comment above is waiting to be approved</p>
                     {% endif %}
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="delete-button" data-comment_id="{{ comment.id }}">Delete</button>
+                    <button class="edit-button" data-comment_id="{{ comment.id }}">Edit</button>
+                    {% endif %}
                     <hr>
                 </div>
                 {% endfor %}
@@ -79,10 +83,31 @@
             </div>
         </div>
     </div>
+
+    <!-- Delete confirmation modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You are about to delete a comment. Click delete to confirm - this cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="page-buttons" data-bs-dismiss="modal">Close</button>
+                    <a id="deleteConfirm" href="#" class="delete-button">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 
 <!-- JavaScript Links -->
-<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+</script>
 
 {% endblock content %}
