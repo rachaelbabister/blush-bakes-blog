@@ -12,7 +12,7 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 /* Edit Comment Function */
 for (let button of editButtons) {
     button.addEventListener("click", (e) => {
-        let commentId = e.target.getAttribute("data-comment_id");
+        let commentId = e.target.getAttribute("comment_id");
         let commentContent = document.getElementById(`comment${commentId}`).innerText;
         commentText.value = commentContent;
         submitButton.innerText = "Update";
@@ -24,8 +24,12 @@ for (let button of editButtons) {
 /* Delete Comment Function */
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
-        let commentId = e.target.getAttribute("data-comment_id");
-        deleteConfirm.href = `delete_comment/${commentId}`;
+        let commentId = e.target.getAttribute("comment_id");
+        if (commentId) {
+            deleteConfirm.href = `delete_comment/${commentId}`;
+        } else {
+            console.error('commentId is null or undefined');
+        }
         deleteModal.show();
     });
 }
