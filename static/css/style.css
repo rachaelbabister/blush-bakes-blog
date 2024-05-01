@@ -307,6 +307,10 @@ main {
     font-size: 80%;
 }
 
+.errorlist {
+    color: red;
+}
+
 /* Comments */
 
 .count {
