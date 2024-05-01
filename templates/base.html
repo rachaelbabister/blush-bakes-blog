@@ -2,7 +2,6 @@
 
 {% url 'home' as home_url %}
 {% url 'account_login' as login_url %}
-{% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
 
@@ -69,7 +68,7 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    <a class="nav-link" href="{% url 'signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
