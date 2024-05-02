@@ -16,7 +16,7 @@
             <hr>
             <h2>User Information</h2>
             <ul class="list-unstyled">
-                <li><strong>Username:</strong> {{ user.username }}</li>
+                <li><strong>Username:</strong> {{ user.user }}</li>
                 <li><strong>Full name:</strong> {{ user.full_name }}</li>
                 <li><strong>Email address:</strong> {{ user.email }}</li>
                 <li><strong>Member since:</strong> {{ user.member_since }}</li>
@@ -25,9 +25,9 @@
         <!-- Favorite Recipes Column -->
         <div class="col-md-5">
             <hr>
-            <h2>Favorite Recipes</h2>
+            <h2>Favourite Recipes</h2>
             <div class="row">
-                {% for recipe in user_profile.favorite_recipes.all %}
+                {% for recipe in user_profile.favourites.all %}
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
