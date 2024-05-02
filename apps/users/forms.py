@@ -6,15 +6,24 @@ from .models import UserProfile
 
 class SignUpForm(UserCreationForm):
     username = forms.CharField(max_length=100, required=True)
-    first_name = forms.CharField(max_length=100, required=True)
-    last_name = forms.CharField(max_length=100, required=True)
+    full_name = forms.CharField(max_length=100, required=True)
     email = forms.EmailField(required=True)
     password1 = forms.CharField(max_length=50, widget=forms.PasswordInput)
     password2 = forms.CharField(max_length=50, widget=forms.PasswordInput, label='Confirm password')
 
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+        fields = ['username', 'full_name', 'email', 'password1', 'password2']
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.set_password(self.cleaned_data["password1"])
+        user.save()
+        user_profile, created = UserProfile.objects.get_or_create(user=user)
+        user_profile.first_name = self.cleaned_data['full_name']
+        if commit:
+            user_profile.save()
+        return user
 
 
 class SignInForm(AuthenticationForm):
@@ -29,11 +38,21 @@ class SignInForm(AuthenticationForm):
 
 class UpdateUserForm(forms.ModelForm):
     username = forms.CharField(max_length=100, required=True)
+    full_name = forms.CharField(max_length=100, required=True)
     email = forms.EmailField(required=True)
 
     class Meta:
         model = User
-        fields = ['username', 'email']
+        fields = ['username', 'full_name', 'email',]
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.save()
+        user_profile = user.profile
+        user_profile.first_name = self.cleaned_data['full_name']
+        if commit:
+            user_profile.save()
+        return user
 
 
 # class UpdateProfileForm(forms.ModelForm):

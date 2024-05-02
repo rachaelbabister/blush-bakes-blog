@@ -311,6 +311,12 @@ main {
     color: red;
 }
 
+.user-list {
+    list-style-type: none;
+    padding-left: 0px;
+    line-height: 35px;;
+}
+
 /* Comments */
 
 .count {
@@ -342,6 +348,7 @@ main {
 .approval-alert {
     background-color: #f7e6de;
     margin-top: 15px;
+    text-align: center;
 }
 
 .delete-button {

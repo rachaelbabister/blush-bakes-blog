@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 # from django.views import View
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm, SignInForm, UpdateUserForm
 
@@ -18,21 +19,28 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'users/register.html', {'form': form})
-        
+
+
+def profile_view(request, username):
+    user = User.objects.get(username=username)
+    user_profile = user.profile
+    return render(request, 'profile.html', {'user': user, 'user_profile': user_profile})       
+
 
 @login_required
 def profile(request):
     if request.method == 'POST':
-        user_form = UpdateUserForm(request.POST, instance=request.user)
-        # profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
-
-        if user_form.is_valid(): # Commented out until known if needed (and profile_form.is_valid())
-            user_form.save()
-            # profile_form.save()
-            messages.success(request, 'You have updated your profile successfully')
-            return redirect(to='users-profile')
+        form = UpdateUserForm(request.POST, instance=request.user)
+        if form.is_valid():
+            user = form.save()
+            user.refresh_from_db()
+            user.profile.full_name = form.cleaned_data['full_name']
+            user.profile.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('users-profile')
     else:
-        user_form = UpdateUserForm(instance=request.user)
-        # profile_form = UpdateProfileForm(instance=request.user.profile)
-
-    return render(request, 'users/profile.html', {'user_form': user_form}) # commented out until known if needed (profile_form': profile_form)
+        form = UpdateUserForm()
+    return render(request, 'users/profile.html', {'form': form})
