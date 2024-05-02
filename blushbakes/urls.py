@@ -17,13 +17,21 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
 from apps.users import views
+from apps.users import forms
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("admin/", admin.site.urls),
-    path('profile/', views.profile, name='profile'),
-    path('register/', views.signup, name='signup'),
     path("summernote/", include("django_summernote.urls")),
+    path('signup/', views.signup, name='register'),
+    path('profile/', views.profile, name='profile'),
     path("", include("apps.blog.urls"), name="blog-urls"),
+
+    # path('login/', views.CustomLoginView.as_view(
+    #     redirect_authenticated_user=True, template_name='apps/users/login.html',
+    #     authentication_form=views.SignInForm), name='login'),
+
+    path('logout/', auth_views.LogoutView.as_view(template_name='apps/users/logout.html'), name='logout'),
 ]
