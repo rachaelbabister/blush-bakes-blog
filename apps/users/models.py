@@ -12,4 +12,6 @@ class UserProfile(models.Model):
     USERNAME_FIELD = 'user'
 
     def __str__(self):
-        return self.user.username
+        if self.user:
+            return self.user.username
+        return "No User"
