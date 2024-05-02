@@ -24,12 +24,20 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row g-0">
+        <div class="col-md-6 offset-md-6 text-end">
+            <a href="#recipe-start" class="page-buttons jump-button">Jump to Recipe</a>
+        </div>
+    </div>
+</div>
 <!-- Recipe Content -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
                 <p class="card-text">
+                    <span id="recipe-start"></span>
                     {{ recipe.content | safe }}
                 </p>
             </div>
