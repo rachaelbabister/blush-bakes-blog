@@ -24,7 +24,7 @@
             <div class="icon-container me-md-3 text-end">
                 {% if user.is_authenticated %}
                     <a href="{% url 'add_to_favourites' recipe.id %}">
-                        {% if request.user in recipe.favourited_by.all %}
+                        {% if request.user in recipe.favourite_recipe.all %}
                             <i class="fa-solid fa-heart"></i>
                         {% else %}
                             <i class="fa-regular fa-heart"></i>

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 {% block head_title %}{% trans "Sign Up" %}{% endblock head_title %}
 
@@ -26,17 +27,27 @@
         <div class="col-md-5">
             <hr>
             <h2>Favourite Recipes</h2>
-            <!-- <div class="col-md-12"> -->
-                <div class="card mb-4">
-                    <!-- <div class="card-body"> -->
-                        {% for recipe in favourite_recipes %}
-                        <li class="favs"><a href="{% url 'recipe_detail' recipe.slug %}">{{ recipe.title }}</a></li>
-                        {% endfor %}
-                    <!-- </div> -->
+            <div class="card mb-4">
+                <div>
+                    {% for recipe in favourite_recipes %}
+                    <form method="POST" action="{% url 'remove_favourites' recipe.id %}">
+                        {% csrf_token %}
+                        <div class="recipe-item">
+                            <div class="fa-solid fa-trash trash" onclick="submitForm(this)"></div>
+                            <div class="hidden-text">Delete</div>
+                            <input type="hidden" name="selected_recipes" value="{{ recipe.id }}">
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="user-list">{{ recipe.title }}</a>
+                        </div>
+                    </form>
+                    {% endfor %}
                 </div>
-            <!-- </div> -->
+            </div>
         </div>
     </div>
 </div>
 
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

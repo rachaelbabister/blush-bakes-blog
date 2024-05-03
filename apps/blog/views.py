@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import Recipe, Comment
 from apps.users.models import UserProfile
 from .forms import CommentForm
@@ -72,6 +73,18 @@ def add_to_favourites(request, recipe_id):
         user_profile.favourite_recipes.add(recipe)
         messages.success(request, f'Added {recipe.title} to your favourites')
     return redirect('recipe_detail', slug=recipe.slug)
+
+
+def remove_favourites(request, recipe_id):
+    recipe = get_object_or_404(Recipe, id=recipe_id)
+    if request.method == 'POST':
+        selected_recipe_ids = request.POST.getlist('selected_recipes')
+        if selected_recipe_ids:
+            if request.user.is_authenticated:
+                user_profile = get_object_or_404(UserProfile, user=request.user)
+                user_profile.favourite_recipes.remove(recipe)
+                messages.success(request, f'{recipe.title} removed from your favourites')
+    return redirect('profile')
 
 
 def comment_edit(request, slug, comment_id):

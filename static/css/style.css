@@ -338,6 +338,28 @@ main {
     line-height: 35px;;
 }
 
+.trash {
+    padding-right: 10px;
+    margin-bottom: 5px;
+    color: #a4a3a6;
+    cursor: pointer;
+}
+
+.hidden-text {
+    display: none;
+    color: #9e7105;
+    padding-right: 10px;
+}
+
+.trash:hover {
+    color: #e56c61;
+}
+
+.trash:hover + .hidden-text {
+    display:inline-block;
+    color: #e56c61;
+}
+
 /* Comments */
 
 .count {
@@ -372,7 +394,7 @@ main {
     text-align: center;
 }
 
-.delete-button
+.delete-button,
 .remove-button {
     color: #ffffff;
     background-color: #4a474e;
@@ -386,7 +408,8 @@ main {
 
 .delete-button:hover,
 .remove-button:hover {
-    background-color: #9e7105;
+    background-color: #f7e6de;
+    color: #4a474e;
 }
 
 /* Contact page */

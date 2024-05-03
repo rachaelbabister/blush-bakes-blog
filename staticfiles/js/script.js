@@ -54,3 +54,8 @@ function topFunction() {
 function goBack() {
     window.history.back();
 }
+
+/* Remove favourites from profile */
+function submitForm(icon) {
+    icon.closest('form').submit();
+}
