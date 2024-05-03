@@ -5,7 +5,7 @@ const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
-const deleteButtons = document.getElementsByClassName("delete-button");
+const deleteButtons = document.getElementsByClassName("remove-button");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
 
@@ -25,11 +25,7 @@ for (let button of editButtons) {
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
         let commentId = e.target.getAttribute("comment_id");
-        if (commentId) {
-            deleteConfirm.href = `delete_comment/${commentId}`;
-        } else {
-            console.error('commentId is null or undefined');
-        }
+        deleteConfirm.href = `delete_comment/${commentId}`;
         deleteModal.show();
     });
 }

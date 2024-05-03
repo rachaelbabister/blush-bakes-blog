@@ -69,7 +69,7 @@ def add_to_favourites(request, recipe_id):
     recipe = get_object_or_404(Recipe, id=recipe_id)
     if request.user.is_authenticated:
         user_profile = get_object_or_404(UserProfile, user=request.user)
-        user_profile.favourites.add(recipe)
+        user_profile.favourite_recipes.add(recipe)
         messages.success(request, f'Added {recipe.title} to your favourites')
     return redirect('recipe_detail', slug=recipe.slug)
 

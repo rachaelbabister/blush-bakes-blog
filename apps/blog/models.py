@@ -29,7 +29,7 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    favourites = models.ManyToManyField(User, related_name='favourite_recipes', blank=True)
+    favourite_recipes = models.ManyToManyField(User, related_name='favourite_recipes', blank=True)
 
     class Meta:
         ordering = ["-created_on"]

@@ -1,0 +1,172 @@
+[
+    {
+        "model": "blog.recipe",
+        "pk": 1,
+        "fields": {
+            "title": "Banana Bread",
+            "slug": "banana-bread",
+            "author": 2,
+            "featured_image": "image/upload/v1714624100/xpc5k7ajdr6deuw0xyxo.jpg",
+            "content": "<p><b>Ingredients:\r\n</b></p><p>- 125g unsalted butter<br>- 150g caster sugar\r\n<br>- 2 large eggs <br>- 250g self raising flour\r\n<br>- 2 ripe bananas</p><hr><p><b>Method:</b><br></p><p>1. Preheat oven to 180°C.\r\n<br>2. Cream the butter and sugar until light and fluffy.\r\n<br>3. Add eggs one at a time, mixing well.\r\n<br>4. Mash the bananas and add to the mixture.<br>5. Fold in the flour.<br>6. Pour into a loaf tin and bake for 30-35 minutes.</p>",
+            "difficulty_rating": "easy",
+            "created_on": "2024-05-02T04:28:20.970Z",
+            "status": 1,
+            "excerpt": "Moist banana bread with a sweet banana flavour. Ideal for breakfast or a snack.",
+            "updated_on": "2024-05-02T04:28:20.970Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 2,
+        "fields": {
+            "title": "Apple Pie",
+            "slug": "apple-pie",
+            "author": 2,
+            "featured_image": "image/upload/v1714624153/nz6ticw3ypnllquqtv9k.jpg",
+            "content": "<p><b>Ingredients</b>\r\n</p><p>- 200g plain flour<br>- 100g butter\r\n<br>- 50g sugar\r\n<br>- 5 large apples\r\n<br>- 50g brown sugar\r\n<br>- 1 tsp cinnamon\r\n<br>- 1 large egg (for egg wash)</p><hr><p><b>Method</b><br></p><p>1. Preheat oven to 180°C.\r\n<br>2. Make the pastry by mixing flour, butter, and sugar until it resembles breadcrumbs.\r\n<br>3. Add a little water to form a dough.\r\n<br>4. Roll out half the dough and line a pie dish.\r\n<br>5. Peel and slice apples, then mix with brown sugar and cinnamon.\r\n<br>6. Place the apple mixture into the pie base.\r\n<br>7. Roll out the remaining dough and cover the pie, crimping the edges.\r\n<br>8. Brush with egg wash.\r\n<br>9. Bake for 30-35 minutes until golden brown.</p>",
+            "difficulty_rating": "hard",
+            "created_on": "2024-05-02T04:29:14.196Z",
+            "status": 1,
+            "excerpt": "A classic homemade apple pie with a buttery crust and sweet apple filling.",
+            "updated_on": "2024-05-02T04:29:14.197Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 3,
+        "fields": {
+            "title": "Chocolate Fudge Cake",
+            "slug": "chocolate-fudge-cake",
+            "author": 2,
+            "featured_image": "image/upload/v1714624248/adz2eovgqoizgrnty96t.jpg",
+            "content": "<p><b>Ingredients:\r\n</b></p><p>- 200g dark chocolate<br>- 200g unsalted butter\r\n<br>- 200g sugar\r\n<br>- 4 large eggs\r\n<br>- 200g plain flour\r\n<br>- 2 tsp baking powder</p><hr><p><b>Method:</b><br></p><p>1. Preheat your oven to 180°C (350°F).\r\n<br>2. Melt the chocolate and butter together, then let it cool.\r\n<br>3. Beat the sugar and eggs together.\r\n<br>4. Add the chocolate mixture to the sugar and eggs, then mix.\r\n<br>5. Sift in the flour and baking powder, then fold gently.\r\n<br>6. Pour into a cake tin and bake for 30-35 minutes.\r\n<br>7. Allow to cool, then cover with chocolate ganache or icing.</p>",
+            "difficulty_rating": "medium",
+            "created_on": "2024-05-02T04:30:49.055Z",
+            "status": 1,
+            "excerpt": "Rich and indulgent chocolate fudge cake for chocolate lovers.",
+            "updated_on": "2024-05-02T04:30:49.055Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 4,
+        "fields": {
+            "title": "Victoria Sponge Cake",
+            "slug": "victoria-sponge-cake",
+            "author": 2,
+            "featured_image": "image/upload/v1714624344/xlhbwzla7mczozgyxtgq.jpg",
+            "content": "<p><b>Ingredients:</b></p><p>- 200g sugar\r\n<br>- 200g butter\r\n<br>- 4 large eggs\r\n<br>- 200g plain flour\r\n<br>- 1 tsp baking powder\r\n<br>- 1 tsp vanilla extract\r\n<br>- 100g strawberry jam\r\n<br>- 100g whipped cream</p><hr><p><b>\r\nMethod:</b></p><p>1. Preheat your oven to 180°C (350°F).\r\n<br>2. Cream the sugar and butter until light and fluffy.\r\n<br>3. Add the eggs one at a time, beating well.\r\n<br>4. Sift in the flour and baking powder, then fold gently.\r\n<br>5. Divide the mixture into two round cake tins.\r\n<br>6. Bake for 20-25 minutes until golden brown.\r\n<br>7. Cool, then spread jam and whipped cream between the cakes.</p>",
+            "difficulty_rating": "medium",
+            "created_on": "2024-05-02T04:32:24.948Z",
+            "status": 1,
+            "excerpt": "A classic British Victoria Sponge Cake with jam and cream filling.",
+            "updated_on": "2024-05-02T04:32:24.948Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 5,
+        "fields": {
+            "title": "Oaty Flapjacks",
+            "slug": "oaty-flapjacks",
+            "author": 2,
+            "featured_image": "image/upload/v1714624396/mccchximsnjun9eltkgs.jpg",
+            "content": "<p><b>Ingredients:</b>\r\n</p><p>- 250g rolled oats\r\n<br>- 125g unsalted butter\r\n<br>- 125g brown sugar\r\n<br>- 3 tbsp honey</p><hr><p><b>\r\nMethod:</b></p><p>1. Preheat your oven to 180°C (350°F).\r\n<br>2. Melt the butter, sugar, and honey together until combined.\r\n<br>3. Stir in the oats until fully coated.\r\n<br>4. Pour into a greased baking tray and press down firmly.\r\n<br>5. Bake for 20-25 minutes until golden brown.\r\n<br>6. Allow to cool, then cut into squares.</p>",
+            "difficulty_rating": "easy",
+            "created_on": "2024-05-02T04:33:16.631Z",
+            "status": 1,
+            "excerpt": "Soft and chewy flapjacks with a hint of honey.",
+            "updated_on": "2024-05-02T04:33:16.632Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 6,
+        "fields": {
+            "title": "Vanilla Cupcakes",
+            "slug": "vanilla-cupcakes",
+            "author": 2,
+            "featured_image": "image/upload/v1714624451/rkxpe3yb1l6jq4kfwvmf.jpg",
+            "content": "<p><b>Ingredients:</b></p><p>- 150g sugar\r\n<br>- 150g butter\r\n<br>- 3 large eggs\r\n<br>- 150g plain flour\r\n<br>- 1 tsp baking powder\r\n<br>- 1 tsp vanilla extract</p><hr><p><b>\r\nMethod:</b></p><p>1. Preheat your oven to 180°C (350°F).\r\n<br>2. Cream the butter and sugar until light and fluffy.\r\n<br>3. Add the eggs one at a time, beating well after each addition.\r\n<br>4. Sift in the flour and baking powder, then fold gently.\r\n<br>5. Add the vanilla extract and mix.\r\n<br>6. Pour into cupcake liners and bake for 18-20 minutes until golden brown.</p>",
+            "difficulty_rating": "easy",
+            "created_on": "2024-05-02T04:34:11.695Z",
+            "status": 1,
+            "excerpt": "Delicious vanilla cupcakes with a light and fluffy texture.",
+            "updated_on": "2024-05-02T04:34:11.695Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 7,
+        "fields": {
+            "title": "New York Cheesecake",
+            "slug": "new-york-cheesecake",
+            "author": 2,
+            "featured_image": "image/upload/v1714624557/ialg5su8y1qaafhchy8h.jpg",
+            "content": "<p><b>Ingredients:</b></p><p>- 200g digestive biscuits<br>- 100g unsalted butter\r\n<br>- 500g cream cheese\r\n<br>- 200g caster sugar\r\n<br>- 2 large eggs</p><hr><p><b>Method:</b><br></p><p>1. Preheat oven to 180°C.\r\n<br>2. Crush the biscuits and mix with melted butter.\r\n<br>3. Press into a springform cake tin to form the base.\r\n<br>4. Beat the cream cheese, sugar, and eggs until smooth.\r\n<br>5. Pour onto the biscuit base and bake for 25-30 minutes.</p>",
+            "difficulty_rating": "medium",
+            "created_on": "2024-05-02T04:35:57.894Z",
+            "status": 1,
+            "excerpt": "Classic New York-style cheesecake with a creamy filling and a biscuit base.",
+            "updated_on": "2024-05-02T04:35:57.894Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 8,
+        "fields": {
+            "title": "Chocolate Chip Biscuits",
+            "slug": "chocolate-chip-biscuits",
+            "author": 2,
+            "featured_image": "image/upload/v1714624604/fmwvueywb7w9b6jiqgai.jpg",
+            "content": "<p><b>Ingredients:</b></p><p>- 150g unsalted butter\r\n<br>- 100g caster sugar\r\n<br>- 100g brown sugar\r\n<br>- 1 large egg\r\n<br>- 225g plain flour\r\n<br>- 100g chocolate chips</p><hr><p><b>Method:</b></p><p>1. Preheat oven to 180°C.\r\n<br>2. Cream the butter and sugars together until smooth.\r\n<br>3. Add the egg and mix well.\r\n<br>4. Fold in the flour and chocolate chips.\r\n<br>5. Drop spoonfuls onto a baking tray.\r\n<br>6. Bake for 10-12 minutes until golden brown.</p>",
+            "difficulty_rating": "easy",
+            "created_on": "2024-05-02T04:36:45.101Z",
+            "status": 1,
+            "excerpt": "Soft and chewy chocolate chip biscuits. Great for tea-time snacks.",
+            "updated_on": "2024-05-02T04:36:45.101Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 9,
+        "fields": {
+            "title": "Classic Brownies",
+            "slug": "classic-brownies",
+            "author": 2,
+            "featured_image": "image/upload/v1714624669/lk5hcg8jsq9wgx0fv8u3.jpg",
+            "content": "<p><b>Ingredients:</b></p><p>\r\n- 200g dark chocolate\r\n<br>- 100g unsalted butter\r\n<br>- 200g sugar\r\n<br>- 3 large eggs\r\n<br>- 100g plain flour\r\n<br>- 1 tsp vanilla extract</p><hr><p><b>\r\nMethod:</b>\r\n</p><p>1. Preheat your oven to 180°C (350°F).\r\n<br>2. Melt the chocolate and butter together, then let it cool.\r\n<br>3. In a separate bowl, whisk the sugar and eggs until light.\r\n<br>4. Add the chocolate mixture and vanilla extract to the sugar and egg mix.\r\n<br>5. Sift in the flour and fold gently.\r\n<br>6. Pour into a greased baking tray and bake for 20-25 minutes.\r\n<br>7. Allow to cool, then cut into squares.</p>",
+            "difficulty_rating": "easy",
+            "created_on": "2024-05-02T04:37:49.539Z",
+            "status": 1,
+            "excerpt": "Delicious and gooey brownies with a rich chocolate flavour.",
+            "updated_on": "2024-05-02T04:37:49.539Z",
+            "favourites": []
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": 10,
+        "fields": {
+            "title": "Lemon Drizzle Cake",
+            "slug": "lemon-drizzle-cake",
+            "author": 2,
+            "featured_image": "image/upload/v1714624719/runieuxetth6vhpmohrh.jpg",
+            "content": "<p>Lemon drizzle cake holds a special place in the hearts of many, and for good reason. Its moist, tender crumb combined with the tangy sweetness of the lemon syrup makes it a true delight for the taste buds. Perfectly balancing zesty citrus flavours with a hint of sweetness, this cake is a refreshing treat that never fails to impress.</p><p>Having dedicated countless hours to perfecting the recipe, I can confidently say that the secret to an exceptional lemon drizzle cake lies in the details. From selecting the juiciest lemons to ensuring the batter is perfectly mixed, every step plays a crucial role in achieving that heavenly balance of flavors and textures. Through experimentation and refinement, I've honed the recipe to perfection, resulting in a cake that is irresistibly moist, bursting with citrus flavor, and finished with a delightful crunchy glaze.<br></p><p>Whether enjoyed with a cup of tea on a lazy afternoon or served as a delightful dessert at a special gathering, lemon drizzle cake never fails to evoke feelings of joy and contentment. Its simplicity belies its incredible taste, making it a timeless classic that continues to captivate hearts and taste buds alike. So indulge in a slice of this lemony goodness and experience the sheer delight of a perfectly crafted lemon drizzle cake.<br></p><p><br></p><hr><p></p><h2>Lemon Drizzle Cake</h2><p><b>Ingredients:</b><br></p><p>- 200g butter<br>- 200g caster sugar\r\n<br>- 200g self raising flour\r\n<br>- 3 large eggs\r\n<br>- 1 lemon (juice and zest)\r\n<br>- 100g icing sugar</p><hr><p><b>Method:</b></p><p>1. Preheat oven to 180°C.\r\n<br>2. Beat butter and sugar until fluffy.\r\n<br>3. Add eggs, one by one, beating well.\r\n<br>4. Fold in flour and lemon zest.\r\n<br>5. Pour into a cake tin and bake for 25-30 minutes.\r\n<br>6. Mix lemon juice with icing sugar to make the drizzle.\r\n<br>7. Drizzle over the cake while it's still warm.</p><p></p>",
+            "difficulty_rating": "easy",
+            "created_on": "2024-05-02T04:38:39.712Z",
+            "status": 1,
+            "excerpt": "A moist and tangy lemon drizzle cake with a sweet, citrusy glaze.",
+            "updated_on": "2024-05-02T15:47:21.352Z",
+            "favourites": []
+        }
+    }
+]

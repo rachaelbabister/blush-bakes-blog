@@ -372,7 +372,8 @@ main {
     text-align: center;
 }
 
-.delete-button {
+.delete-button
+.remove-button {
     color: #ffffff;
     background-color: #4a474e;
     letter-spacing: 2px;
@@ -383,7 +384,8 @@ main {
     font-size: 80%;
 }
 
-.delete-button:hover {
+.delete-button:hover,
+.remove-button:hover {
     background-color: #9e7105;
 }
 
