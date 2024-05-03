@@ -1,12 +1,12 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Recipe, Comment
+from apps.users.models import UserProfile
 from .forms import CommentForm
 
 
-# Create your views here.
 class RecipeList(generic.ListView):
     queryset = Recipe.objects.filter(status=1)
     template_name = "blog/index.html"
@@ -63,6 +63,15 @@ def recipe_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
+
+def add_to_favourites(request, recipe_id):
+    recipe = get_object_or_404(Recipe, id=recipe_id)
+    if request.user.is_authenticated:
+        user_profile = get_object_or_404(UserProfile, user=request.user)
+        user_profile.favourites.add(recipe)
+        messages.success(request, f'Added {recipe.title} to your favourites')
+    return redirect('recipe_detail', slug=recipe.slug)
 
 
 def comment_edit(request, slug, comment_id):

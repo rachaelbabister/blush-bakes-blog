@@ -1,12 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-# from django.views import View
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm, SignInForm, UpdateUserForm
+from .models import UserProfile
 
-
-# Create your views here.
 
 def signup(request):
     if request.method == 'POST':
@@ -22,9 +20,12 @@ def signup(request):
 
 
 def profile_view(request, username):
+    recipe = get_object_or_404(Recipe, id=recipe_id)
+    print("Recipe ID:", recipe.id)
     user = User.objects.get(username=username)
     user_profile = user.profile
-    return render(request, 'profile.html', {'user': user, 'user_profile': user_profile})       
+    favourite_recipes = user_profile.favourites.all()
+    return render(request, 'profile.html', {'user': user, 'user_profile': user_profile, 'favourite_recipes': favourite_recipes})       
 
 
 @login_required
@@ -43,4 +44,6 @@ def profile(request):
             return redirect('users-profile')
     else:
         form = UpdateUserForm()
-    return render(request, 'users/profile.html', {'form': form})
+        user_profile = UserProfile.objects.get(user=request.user)
+        favourite_recipes = user_profile.favourite_recipes.all()
+    return render(request, 'users/profile.html', {'form': form, 'favourite_recipes': favourite_recipes})

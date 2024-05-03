@@ -7,7 +7,7 @@
 <div class="main-title">
     <div class="container">
         <button onclick="goBack()" class="page-buttons">&laquo; Back to previous page</button>
-        <div class="row g-0">
+        <div class="row g-0 custom-row">
             <div class="col-md-6 main-title-image">
                 {% if "placeholder" in recipe.featured_image.url %}
                 <img class="image-width" src="{% static 'images/default.jpg' %}" alt="placeholder image">
@@ -20,6 +20,17 @@
                 <p class="difficulty-rating-2">Rated: {{ recipe.difficulty_rating }}</p>
                 <p class="post-excerpt">{{ recipe.excerpt }}</p>
                 <p class="post-subtitle">{{ recipe.author }} | {{ recipe.created_on }}</p>
+            </div>
+            <div class="icon-container me-md-3 text-end">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'add_to_favourites' recipe.id %}">
+                        {% if request.user in recipe.favourited_by.all %}
+                            <i class="fa-solid fa-heart"></i>
+                        {% else %}
+                            <i class="fa-regular fa-heart"></i>
+                        {% endif %}
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>

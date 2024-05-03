@@ -28,10 +28,5 @@ urlpatterns = [
     path('signup/', views.signup, name='register'),
     path('profile/', views.profile, name='profile'),
     path("", include("apps.blog.urls"), name="blog-urls"),
-
-    # path('login/', views.CustomLoginView.as_view(
-    #     redirect_authenticated_user=True, template_name='apps/users/login.html',
-    #     authentication_form=views.SignInForm), name='login'),
-
     path('logout/', auth_views.LogoutView.as_view(template_name='apps/users/logout.html'), name='logout'),
 ]

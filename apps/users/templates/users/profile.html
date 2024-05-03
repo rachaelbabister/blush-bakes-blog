@@ -26,20 +26,15 @@
         <div class="col-md-5">
             <hr>
             <h2>Favourite Recipes</h2>
-            <div class="row">
-                {% for recipe in user_profile.favourites.all %}
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ recipe.title }}</h5>
-                            <p class="card-text">{{ recipe.description }}</p>
-                            <!-- Add more details about the recipe -->
-                            <a href="{{ recipe.get_absolute_url }}" class="btn btn-primary">View Recipe</a>
-                        </div>
-                    </div>
+            <!-- <div class="col-md-12"> -->
+                <div class="card mb-4">
+                    <!-- <div class="card-body"> -->
+                        {% for recipe in favourite_recipes %}
+                        <li class="favs"><a href="{% url 'recipe_detail' recipe.slug %}">{{ recipe.title }}</a></li>
+                        {% endfor %}
+                    <!-- </div> -->
                 </div>
-                {% endfor %}
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 </div>
