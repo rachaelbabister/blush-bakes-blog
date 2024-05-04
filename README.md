@@ -301,6 +301,7 @@ I have tried to ensure the site has been made as accessible as possible by:
 - Am I Responsive? - to showcase the website on different devices.
 - Balsamiq - to create Wireframes.
 - ChatGPT - to create a JSON file of all the recipes.
+- CI Pyton Linter - to check custom written python code for errors.
 - Codeanywhere - cross platform cloud IDE to deploy workspace environment to Github.
 - Cloudinary - cloud based storage for images.
 - Font Awesome - to use icons on the website.
@@ -309,6 +310,7 @@ I have tried to ensure the site has been made as accessible as possible by:
 - Google Image Search - to find images for the recipes.
 - Google Dev Tools - to troubleshoot, test and solve issues with any styling.
 - Heroku - for hosting and deployment of the site.
+- JSHint - to check JavaScript files for bugs.
 - Lighthouse - to test the accessibility of the site.
 - Lucid - to create my Data Models.
 - Photoshop 2023 - to optimise images for the website.
@@ -317,18 +319,33 @@ I have tried to ensure the site has been made as accessible as possible by:
 
 ### Deployment
 
+#### Environment & Settings
 
+- In your IDE open your env.py file or create one in the main directory if it hasn't been created for you.
+- Having created your cloud based database, add the DATABASE_URL value and a SECRET_KEY value to the env.py file.
+- Open the settings.py file iand import the env.py file and the DATABASE_URL and SECRETKEY file paths.
+- Install Django and add to requirements.txt.
+- Create your project.
+- Add the STATIC files settings.
+- Create a file called Procfile (with a capital P) in the main directory,
+- For cloud based image storage, add Cloudinary URL to env.py
+- Add cloudinary libraries to INSTALLED APPS.
+- Add your IDE workspace and Heroku to ALLOWED_HOSTS.
+- Make migrations and migrate.
+- Before you add, commit & push your files to GitHub, ensure DEBUG is set to False in your settings.py file.
 
+#### Deploying to Heroku
 
-
-I used Github Pages to deploy the live website. To deploy a website on Github, follow these steps:
-
-1. Log in to Github - or set up a new account.
-2. Find the repository for [Blush Bakes by Rach](https://github.com/rachaelbabister/blush-bakes-by-rach).
-3. Click on 'Settings' along the top.
-4. Click on 'Pages' in the left hand side navigation bar.
-5. In the 'Source' section, ensure 'Deploy from a branch' is selected. Choose 'main' and 'Root' from the drop down menus and click Save.
-6. Your live site is now deployed and can be viewed using the link provided.
+- Login or create an account on Heroku.com. Click 'New' and then 'Create New App'.
+- Give your project a unique name and select a region, then click 'Create App'.
+- Connect your Heroku project to your GitHub repository. Under deployment you can choose GitHub, find the relevant one and click 'Connect.
+- Once connected, go to the Settings tab and click on 'Reveal Confid Vars'. Add the environment key & value variables used above in your env.py file (CLOUDINARY_URL, DATABASE_URL & SECRET_KEY).
+- Next add DISABLE_COLLECTSTATIC and add 1 if this is to be disabled to prevent errors, or 0 if the app is in a state where errors will not be generated.
+- Click on Buildpack further down and click Add Buildpack to confirm Heroku buildpack is present.
+- Navigate to the Deploy section, click on Github for the deployment method and confirm.
+- Search for your repository name and click connect.
+- At the bottom of the deploy section, make sure you are connected to the main brance and then click Deploy Branch.
+- You can then view your live site.
 
 ### Local Development
 
@@ -337,7 +354,7 @@ I used Github Pages to deploy the live website. To deploy a website on Github, f
 To fork a repository on Github, follow these steps:
 
 1. Log in to Github - or step up a new account.
-2. Click on the repository for [Blush Bakes by Rach](https://github.com/rachaelbabister/blush-bakes-by-rach).
+2. Click on the repository name.
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
@@ -345,7 +362,7 @@ To fork a repository on Github, follow these steps:
 To clone a repository on Github, follow these steps:
 
 1. Log in to Github - or step up a new account.
-2. Find the repository for [Blush Bakes by Rach](https://github.com/rachaelbabister/blush-bakes-by-rach).
+2. Find or create your repository.
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and paste the link you copied in step 3. Press enter.
@@ -367,30 +384,44 @@ In the TESTING file linked below, you can see the tests and fixes I did manage t
 
 ### Code Used
 
-- [W3Schools](https://www.w3schools.com/howto/howto_css_transition_hover.asp) - helped to style my buttons to have a smoother transition. I also used them for a Font Awesome tooltip, but have since removed the element that used it.
-- [W3Docs](https://www.w3docs.com/snippets/css/display-the-hidden-element-on-hovering-over-hyperlink-or-a-tag.html) - helped to display an element on hover.
-- [RapidTables](https://www.rapidtables.com/convert/color/hex-to-rgb.html) - converting hex colours to rgb values.
-- [Stack Overflow](https://stackoverflow.com/questions/51893686/css-columns-fill-row-first) - helped to style my gallery page so that the columns filled the rows across first, rather than down.
-- [Free Code Camp](https://www.freecodecamp.org/news/css-only-back-to-top-button/) - helped to code the 'back to top' button using only html and css.
-- [W3Docs](https://www.w3docs.com/tools/code-editor/3033) - styling to increase the checkbox size in the contact form.
-- [Soft Author](https://softauthor.com/css-flexbox-responsive-registration-form-with-source-code/) - used the code in order to help make the contact form responsive by having the form elements go into two columns on a bigger screen.
-- I also used the [Love Running](https://rachaelbabister.github.io/loverunning/) project I created with [Code Institute](https://codeinstitute.net/) to help with some coding.
+- [W3Schools](https://www.w3schools.com) - helped with JavaScript for scroll to top button.
+- [Stack Overflow](https://stackoverflow.com/) & [Django](https://docs.djangoproject.com/) - help with form template amends.
+- [DEV](https://dev.to/earthcomfy/django-user-profile-3hik) - help with linking a register page with a profile page.
+- [YouTube](https://www.youtube.com/watch?v=S9-Bt1JgRjQ) - tuturial on category drop down menu and pages.
+- Code Institute Slack Channel
+- I also used the 'I Think Therefore I Blog walkthrough to help with some setup and coding.
+- ChatGPT - to explain certain code and bugs I didn't understand.
 
 ### Content
 
-All content used on the site was written by Rachael Babister.
+The recipes were created by ChatGPT in the form of a JSON file for easy importing into the database, rather than hard coding all the recipe details in.
 
 ### Media
 
-All photos were taken by Rachael Babister and are originals. Icons used on the site are Font Awesome icons.
+The logo was designed by myself and the header strip photo was taken by me. Icons used on the site are Font Awesome.
+
+#### Recipe Card Images
+
+- [Arla Foods](https://www.arlafoods.co.uk/recipes/chocolate-brownies/) - Brownies
+- [Baking with Granny](https://bakingwithgranny.co.uk/recipe/banana-loaf/) - Banana Bread
+- [All Recipes](https://www.allrecipes.com/recipe/157877/vanilla-cupcake/) - Cupcakes
+- [BBC Good Food](https://www.bbcgoodfood.com/recipes/classic-victoria-sandwich-recipe) - Victoria sponge
+- [Kidspot](https://www.kidspot.com.au/kitchen/recipes/choc-chip-cookies-recipe/oz1txtz2) - Chocolage Chip Biscuits
+- [realfood Tesco](https://realfood.tesco.com/recipes/spiced-apple-pie.html) - Apple Pie
+- [realfood Tesco](https://realfood.tesco.com/recipes/vegan-chocolate-fudge-cake.html) - Fudge Cake
+- [Taste](https://www.taste.com.au/recipes/new-york-cheesecake-3/94db8765-15d6-46c3-be3a-3a2aa119b5e6) - Cheesecake
+- [Every Day Cooks](https://everydaycooks.co.uk/flapjack/) - Flapjacks
+- [Cooking with my Kids](https://www.cookingwithmykids.co.uk/lemon-drizzle-cake/) - Lemon Drizzle
+- [Baking Mad](https://www.bakingmad.com/recipes/millionaire-s-shortbread) - Millionaires Shortbread
+- [My GF Guide](https://www.mygfguide.com/gluten-free-red-velvet-cupcakes/) - Red Velvet Cupcakes
+
   
 ### Acknowledgments
 
-I would like to thank the following people for their help, whether directly or indirectly!
+I wouldn't have been able to complete this project without the help of the Slack Community! Special mention to Craig Hudson who stayed up until 2am working through some code issues with me!
 
-- My two daughters who have been very patient with me whilst doing this project, and helping to walk the dog and clean the house!
-- My Code Institute Mentor [Jubril Akolade](https://www.linkedin.com/in/jubrillionaire/?originalSubdomain=ca).
-- Members of the Code Institute Slack community. Although I didn't ask any direct questions for help, when searching for little queries, I always managed to find the answer!
-- My friend Victoria Walters who has had to listen to me chat about code for far too long! And for looking over my site and checking for errors.
-- My friend Kelly Bates who knows nothing about code but still happily looked through my live site for me checking for any issues - and bringing some to my attention!
-- [Stuart Crang](https://www.linkedin.com/in/stuart-crang-50401897/) from Code Institute who signed me up to the course! I hope you like my first project!
+Code Institute Tutor Support helped me when my database messed up.
+
+To my friends, who I am constantly asking to check over my website when they have their stuff to do! 
+
+And apologies to my daughters who have had to eat microwave meals all week whilst I get this project finished!
