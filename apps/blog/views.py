@@ -3,15 +3,38 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Recipe, Comment
+from .models import Recipe, Comment, Category
 from apps.users.models import UserProfile
 from .forms import CommentForm
 
 
 class RecipeList(generic.ListView):
     queryset = Recipe.objects.filter(status=1)
-    template_name = "blog/index.html"
+    template_name = 'blog/index.html'
     paginate_by = 6
+
+
+class CategoryList(generic.ListView):
+    """
+    Display a list of recipes by category
+    """
+    template_name = 'blog/category.html'
+    context_object_name = 'catlist'
+
+    def get_queryset(self):
+        content = {
+            'cat': self.kwargs['category'],
+            'recipe': Recipe.objects.filter(category__name=self.kwargs['category']).filter()
+        }
+        return content
+
+
+def category_list(request):
+    category_list = Category.objects.exclude(name='default')
+    context = {
+        "category_list": category_list,
+    }
+    return context
 
 
 def recipe_detail(request, slug):
@@ -33,7 +56,6 @@ def recipe_detail(request, slug):
 
     :template:`blog/recipe_detail.html`
     """
-
     queryset = Recipe.objects.filter(status=1)
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.comments.all().order_by("-created_on")
@@ -67,6 +89,10 @@ def recipe_detail(request, slug):
 
 
 def add_to_favourites(request, recipe_id):
+    """
+    Enables the user to add a favourite
+    recipe to their Profile page
+    """
     recipe = get_object_or_404(Recipe, id=recipe_id)
     if request.user.is_authenticated:
         user_profile = get_object_or_404(UserProfile, user=request.user)
@@ -76,6 +102,10 @@ def add_to_favourites(request, recipe_id):
 
 
 def remove_favourites(request, recipe_id):
+    """
+    Enables the user to remove a favourite
+    recipe from their Profile page
+    """
     recipe = get_object_or_404(Recipe, id=recipe_id)
     if request.method == 'POST':
         selected_recipe_ids = request.POST.getlist('selected_recipes')

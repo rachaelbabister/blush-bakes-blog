@@ -12,7 +12,20 @@ DIFFICULTY_CHOICES = [
 
 User = get_user_model()
 
-# Create your models here.
+# MODELS LISTED HERE
+
+class Category(models.Model):
+    """
+    Stores categories relating to the recipes.
+    """
+    name = models.CharField(max_length=100)
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self):
+        return self.name
+
 
 class Recipe(models.Model):
     """
@@ -30,6 +43,7 @@ class Recipe(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     favourite_recipes = models.ManyToManyField(User, related_name='favourite_recipes', blank=True)
+    category = models.ManyToManyField(Category, related_name='recipes')
 
     class Meta:
         ordering = ["-created_on"]

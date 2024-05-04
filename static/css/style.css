@@ -113,6 +113,15 @@ header a {
     color: #9e7105;
 }
 
+.dropdown-item:hover {
+    background-color: #f7e6de;
+}
+
+.dropdown-menu {
+    border: 0;
+    border-radius: 0;
+}
+
 /* Back to top button */
 #back-to-top {
     display: none;
