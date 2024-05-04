@@ -9,7 +9,7 @@ As a visitor to the site, you'll find a diverse selection of baking recipes, ran
 
 One of the highlights of this blog is the ability to save your favourite recipes directly to your profile, giving easy access to the recipes at a later date.
 
-![Blush Bakes by Rach Recipe Blog shown on a range of devices, using amiresponsive(https://ui.dev/amiresponsive)](readmefiles/images/ux/responsivedesigns.jpg))
+![Blush Bakes by Rach Recipe Blog shown on a range of devices, using amiresponsive(https://ui.dev/amiresponsive)](readmefiles/images/ux/responsivedesigns.jpg)
 
 LIVE SITE
 
@@ -122,58 +122,153 @@ The type of imagery used on the website is all photography. The logo was designe
 
 ### Wireframes
 
-Before implementing the website, I created Wireframes for each page using Balsamiq. You can access them [here](README/images/wireframes).
+Before implementing the website, I created Wireframes for each page using Balsamiq. You can access them [here](readmefiles/images/wireframes).
 
+### Data Models
+
+Various data models were drawn out before creating the actual models, to serve as a blueprint for database design, helping with concepts and organisation of the structure of a database. 
+
+![Blush Bakes by Rach Data Models](readmefiles/images/ux/datamodels.png)
+
+#### Relationships:
+
+#### Recipe Posts:
+- User (OneToMany): Each recipe is written and posted by a user. This relationship indicates a OneToMany relationship, where one user can create multiple recipe posts, but each recipe post is associated with only one user.
+
+#### Comments:
+- Recipe Post (OneToMany): Comments are associated with recipe posts, following a OneToMany relationship. Each recipe post can have multiple comments, but each comment is linked to only one recipe post.
+- User (OneToMany): Similarly, comments are posted by users, forming another OneToMany relationship. A user can write multiple comments, but each comment is attributed to only one user.
+
+#### User Profile:
+- User (OneToOne): Each user has a user profile, establishing a OneToOne relationship. This ensures that each user has a single profile, and vice versa.
+
+#### Contact Page:
+- User (ManyToOne): The contact page allows users to send messages via a form. This establishes a ManyToOne relationship with users, as multiple messages can be sent by different users, but each message is associated with only one user.
+
+#### Category:
+- Recipe Categories (ManyToMany): Recipe posts can belong to multiple categories, while each category can have multiple recipe posts. This establishes a ManyToMany relationship, allowing for flexible categorisation of recipes.
+
+### Website Security
+
+#### env.py File
+- Storing sensitive information on a website is vital to keep your website safe. API keys and databases are stored in the env.py which is not included in version control to prevent exposure.
+
+#### Defensive Programming
+- Using secure coding techniques such as {%%} and @login_required helps to restrict unauthorised actions on the site, ensuring certain functions are only seen by authorised users.
+
+#### Input Validation
+- A plus to using Django is utilising their built-in form validation framework. The system can check for exising users, required fields and password confirmation, triggering errors if anything doesn't meet the requirements.
+
+#### User Feedback
+- Flash messages are used to feedback to a user when a certain action has been processed - whether successful or not. The user has a much more improved experience, feeling confident they know the processes of what is happening with their actions on the site.
 
 ---
 
 ## Features
 
-Browse Recipes: Explore a wide range of recipes categorized by occasion, flavor, and difficulty level.
-Discover Categories: Dive into various recipe categories including celebration cakes, cupcakes, biscuits, and more.
-User Registration: Register an account to save your favorite recipes and submit your own creations.
-Interactive Interface: Enjoy a user-friendly interface with easy navigation and stunning visuals.
+### General features 
 
-### General features on each page
+- The site is easily navigated with recipes appearing on the home, so users can start choosing a recipe straight away. 
+- A drop down menu features difference categories to choose a recipe based on flavour or type of bake.
+- A user can register on the site to make comments on recipes and save their favourite recipes. 
+- All pages show the branding of the company with a logo and styling to match. A responsive navigational bar is in a header at the top of the page.
+- Social media links can be found in the footer, with links for Facebook & Instagram, along with a contact link. These are shown as icons.
+- There is a 'back to top' button for longer pages in the bottom right corner, making it easier for users to scroll to the top of the page.
 
-- All pages show the logo on the left of the page and a responsive navigational bar on the right, in a header at the top of the page. 
-- In a footer at the bottom of the page are the social media links for Facebook & Instagram, along with a link to the contact page. These are shown as icons.
-- A favicon of the logo appears in the browser tab.
-- In the bottom right corner, as you start to scroll down, an arrow appears which enables the user to get back to the top of the page.
+![Blush Bakes by Rach Recipe Blog shown on a range of devices, using amiresponsive(https://ui.dev/amiresponsive)](readmefiles/images/ux/responsivedesigns.jpg)
 
-![All 4 paged of the website showing they are responsive](assets/images/readme-images/responsive-pages.png)
-
-![All 4 paged of the website showing they are responsive](assets/images/readme-images/headerandfooter.png)
 
 #### Home Page
 
-The home page features a bright hero image of some cupcakes and a treat box directly underneath the navigational header. There is some welcome text underneath, which introduces the baker and where they're based.
+- NAV BAR: Is the same on every page. Logo on the left with main page navigation just to the left, with account management links to the right of the page. These change when you are signed in so you can access your profile page or logout. There is also a category drop down menu under Recipes, which when you select one will only show recipes within that category.
 
-The next section is broken down into images and text, to showcase some of the cakes and treat boxes, and gives the user ideas as to what they can order and for who.
+![NavBar](readmefiles/images/screenshots/navbar.png)
 
-Just above the footer there is another image banner with a call to action to take you to the contact page.
+![NavBar - Logged in](readmefiles/images/screenshots/navbar-loggedin.png)
 
-#### Gallery
+![NavBar - Categories](readmefiles/images/screenshots/category-dropdown.png)
 
-In this top section below the menu header, it starts by asking if the user needs inspiration and to take a look at the gallery. There are 3 anchor links (cakes, cupcakes and treat boxes) which when clicked take you to the appropriate part of the gallery.
+- Header: Features the nav bar and a full width image strip and heading of 'Tasty Baking Recipes'.
 
-The same call to action banner is also at the bottom above the footer.
+![Header](readmefiles/images/screenshots/header.png)
 
-#### Contact
+- MAIN CONTENT: Features recipe posts with a small description underneath an image of the recipe. Users can see what the recipe is, a small excerpt, the difficulty rating, and who it was posted by and when. A user can click on the image or content of the recipe card to be taken to the full recipe page.
 
-To bring some colour and interest to this page there is a colourful cake banner image below the menu section. It invites users to get in touch using the contact form. Some elements are required before the form can be submitted, and users do get alerted when they haven't filled in these elements.
+![Home Page Main Content](readmefiles/images/screenshots/maincontent-home.png)
 
-#### Thank You
+![Home Page Main Content](readmefiles/images/screenshots/recipelinks-home.png)
 
-A simple page with the same styling as the Contact page. The form elements have been removed and replaced with a 'thank you for submitting' message.
+- PAGINATION: At the bottom of the recipe cards/links there are pagination buttons depending on how many pages there are and what page you are on. You can scroll forwards and backwards using these.
+
+![Home Page Pagination](readmefiles/images/screenshots/pagination.png)
+
+- FOOTER: A pink background banner stretching across the width of the site, with social media links and a copyright message.
+
+![Footer](readmefiles/images/screenshots/footer.png)
+
+#### User Account
+
+- SIGN UP: Users are able to fill in their details to create a user profile on the website, in order to be able to make comments and add favourites.
+
+![Sign Up](readmefiles/images/screenshots/signup.png)
+
+- SIGN IN: Allows registered users to sign in and access features on the site.
+
+![Sign In](readmefiles/images/screenshots/signin.png)
+
+- PROFILE PAGE: Users can access their profile page in order to view their favourite recipes and see their personal information. They also have the ability to delete the recipes listed in their favourites.
+
+![Profile](readmefiles/images/screenshots/profileinfo.png)
+![Delete Favourites ](readmefiles/images/screenshots/favourites-delete.png)
+
+- FLASH MESSAGES: Users will get flash messages at the top of the main content (underneath the main header of the page), notifying them of an action that has taken place.
+
+![Flash Messages](readmefiles/images/screenshots/flashmessages.png)
+![Flash Messages](readmefiles/images/screenshots/flashmessages2.png)
+
+- SIGN OUT: Users can use the sign out button in the main nav bar to sign out of their account. They are asked to confirm if they would like to sign out, or return back to the home page if they want to stay logged in.
+
+![Sign Out](readmefiles/images/screenshots/signout.png)
+
+#### Recipe Posts
+
+- RECIPE HEADER: When a user clicks on a recipe from the home page, they get taken to a detailed page of that recipe. At the top is a larger image of the food, and the same details as on the recipe card - title, difficulty rating, excerpt and posted by and when. There is also a 'back to previous page' button, which will take the user back to the previous page they were on.
+
+![Recipe Header](readmefiles/images/screenshots/recipe-header.png)
+
+- RECIPE DETAILS: Underneath the image are the recipes ingredients and method. Some recipes may have information paragraphs from the author, and so to help with user accessibility, there is a Jump to Recipe button so it auto scrolls to the actual recipe.
+
+![Recipe Details](readmefiles/images/screenshots/recipe-details.png)
+
+- HEART ICON: The heart icon in the top right of the recipe header enables users to add that recipe to their favourites. They can access them when they visit their profile page. A user is only able to see the heart when they are logged in.
+
+![Heart Icon](readmefiles/images/screenshots/favourites-heart.png)
+
+- COMMENTS: Comments appear underneath the recipe details. Once a comment has been approved by admin, anyone can view the comments. When tey are under approval, only the user who posted the comment can see it, and is able to manage that comment with an edit or delete button. You can only make comments when you are logged in. If a user tries to delete a comment, they are asked to confirm and are able to cancel the delete should they wish.
+
+![Comments](readmefiles/images/screenshots/comments.png)
+![Manage Comments](readmefiles/images/screenshots/comment-manage.png)
+
+#### Category View
+
+- CATEGORIES: If a user wants to find a recipe by category, they can use the Recipe drop down menu on the main navigation bar. Once clicked, only the recipes under that category will show. To view all recipes again, they can click on Home or the logo which will also take you back to the home page.
+
+![Category List](readmefiles/images/screenshots/category-view.png)
 
 ### Future Implementations
 
-- A new page with standard pricing and examples of cakes and their pricing.
-- An information page giving users cake care and cutting guides.
-- A suppliers page - recommendations of where to buy supplies.
-- A 'recipe' page which details flavours available for sponge and fillings, and what options of treat boxes are available.
-What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
+- Update or delete a user profile. (this should have been included in this design iteration, but time didn't allow)
+- A contact form for users to get in touch. (this should have been included in this design iteration, but time didn't allow)
+- A star rating on the recipes for users to rate a recipe, and for other users to see what the star rating is.
+- A toggle of metric/imperial measurements on each recipe.
+- Instructional videos for users to follow along.
+- A printable versin of the recipe.
+- Nutrional values for the recipes.
+- The ability for a user to adjust ingredient quantities based on the size of the bake they want to do.
+- Email subscription, with unsubscribe options too.
+- A forgotten/reset password function.
+- A search by keyword function.
+- To be able to share the recipes on a users social media pages.
 
 ### Accessibility
 
@@ -181,29 +276,37 @@ I have tried to ensure the site has been made as accessible as possible by:
 
 - Using semantic HTML.
 - Using alt attributes on images where available.
-- Adding aria-labels for screen labels.
+- A responsive design.
 - Using colour contrasts between the text and background.
+- Readable fonts.
+- User feedback where required.
 
 ---
 
-## Technologies Used
+## Technologies & Frameworks
 
-### Languages Used
+### Main Technologies
 
-HTML and CSS were used to create this website.
+- HTML & CSS - to create the structure and add styling to the site.
+- JavaScript - for functionality.
+- Django - a Python based framework for backend development.
+- ElephantSQL - a Postgres database to store all data.
 
 ### Frameworks, Libraries & Programs Used
 
-- [Balsamiq](https://balsamiq.com/) - to create Wireframes.
-- [Codeanywhere](https://app.codeanywhere.com/) - cross platform cloud IDE to deploy workspace environment to Github.
-- [Github](https://github.com/) - to store and dislay all files and assets for the website.
-- [Google Fonts](https://fonts.google.com/) - to import the fonts used on the website.
-- [Font Awesome](https://fontawesome.com/icons) - to use icons on the website.
-- [Google Dev Tools](https://developer.chrome.com/docs/) - to troubleshoot, test and solve issues with any styling.
-- [W3C Markup Validator](https://validator.w3.org/) - to check the source code of my html files for any bugs.
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - to check the source code of my css file for any bugs.
+- Am I Responsive? - to showcase the website on different devices.
+- Balsamiq - to create Wireframes.
+- Codeanywhere - cross platform cloud IDE to deploy workspace environment to Github.
+- Font Awesome - to use icons on the website.
+- Github - to store and dislay all files and assets for the website.
+- Google Fonts - to import the fonts used on the website.
+- Google Dev Tools - to troubleshoot, test and solve issues with any styling.
+- Lighthouse - to test the accessibility of the site.
+- Lucid - to create my Data Models.
+- W3C Markup Validator - to check the source code of my html files for any bugs.
+- W3C CSS Validator - to check the source code of my css file for any bugs.
 - Photoshop 2023 - to optimise images for the website.
-- [Am I Responsive?](https://ui.dev/amiresponsive?) - to showcase the website on different devices.
+
 
 Add any frameworks, libraries or programs used while creating your project.
 
