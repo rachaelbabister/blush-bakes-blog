@@ -98,6 +98,10 @@ Blush Bakes by Rach is a company run by cake artist, Rachael Babister. This webs
 - I want to add more or delete favourite recipes to my profile.
 - I want to amend the details of my profile.
 
+### Agile Methodology
+
+Before work started on the build of the website, I created a Board of User Stories to determine exactly what was needed. Using the MoSCoW method, it was much easier to implement each issue based on their priority rather than trying to get everything completed. My User Story Board can be viewed [here.](https://github.com/users/rachaelbabister/projects/3/views/1)
+
 ---
 ## Design
 
@@ -244,7 +248,7 @@ Various data models were drawn out before creating the actual models, to serve a
 
 ![Heart Icon](readmefiles/images/screenshots/favourites-heart.png)
 
-- COMMENTS: Comments appear underneath the recipe details. Once a comment has been approved by admin, anyone can view the comments. When tey are under approval, only the user who posted the comment can see it, and is able to manage that comment with an edit or delete button. You can only make comments when you are logged in. If a user tries to delete a comment, they are asked to confirm and are able to cancel the delete should they wish.
+- COMMENTS: Comments appear underneath the recipe details. Once a comment has been approved by admin, anyone can view the comments. When they are under approval, only the user who posted the comment can see it, and is able to manage that comment with an edit or delete button. You can only make comments when you are logged in. If a user tries to delete a comment, they are asked to confirm and are able to cancel the delete should they wish.
 
 ![Comments](readmefiles/images/screenshots/comments.png)
 ![Manage Comments](readmefiles/images/screenshots/comment-manage.png)
@@ -296,21 +300,26 @@ I have tried to ensure the site has been made as accessible as possible by:
 
 - Am I Responsive? - to showcase the website on different devices.
 - Balsamiq - to create Wireframes.
+- ChatGPT - to create a JSON file of all the recipes.
 - Codeanywhere - cross platform cloud IDE to deploy workspace environment to Github.
+- Cloudinary - cloud based storage for images.
 - Font Awesome - to use icons on the website.
 - Github - to store and dislay all files and assets for the website.
 - Google Fonts - to import the fonts used on the website.
+- Google Image Search - to find images for the recipes.
 - Google Dev Tools - to troubleshoot, test and solve issues with any styling.
+- Heroku - for hosting and deployment of the site.
 - Lighthouse - to test the accessibility of the site.
 - Lucid - to create my Data Models.
+- Photoshop 2023 - to optimise images for the website.
 - W3C Markup Validator - to check the source code of my html files for any bugs.
 - W3C CSS Validator - to check the source code of my css file for any bugs.
-- Photoshop 2023 - to optimise images for the website.
-
-
-Add any frameworks, libraries or programs used while creating your project.
 
 ### Deployment
+
+
+
+
 
 I used Github Pages to deploy the live website. To deploy a website on Github, follow these steps:
 
