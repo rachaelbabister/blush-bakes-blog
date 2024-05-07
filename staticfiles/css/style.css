@@ -279,8 +279,7 @@ main {
 }
 
 .favs {
-    padding-top: 3px;
-    line-height: 25px;
+    color: #9e7105;
 }
 
 #recipe-start {
@@ -404,119 +403,6 @@ main {
     color: #4a474e;
 }
 
-/* Contact page */
-/* Contact header image */
-/* #contact-image {
-    height: 250px;
-    width: 100%;
-    background: url("number90cake.webp") no-repeat left bottom/cover;
-    display: flex; */
-    /* Background colour if image doesn't load */
-    /* background-color: #9e7105;
-} */
-
-/* #contact-text {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* #contact-text h2 {
-    background-color: rgba(253, 247, 242, .8);
-    color: #4a474e;
-    font-size: 270%;
-    font-weight: lighter;
-    text-align: center;
-    padding: 20px;
-} */
-
-/* Contact form */
-/* #getintouch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 15px;
-    margin-bottom: 30px;
-}
-
-#contact-form {
-    flex: 1;
-    max-width: 600px;
-    color: #4a474e;
-    background-color: rgba(205, 172, 93, .5);
-    padding: 15px;
-} */
-
-/* #contact-form a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-.input-area {
-    background-color: rgba(205, 172, 93, .5);
-    color: #4a474e;
-    width: 100%;
-    height: 25px;
-    margin: 5px 0 20px 0;
-    border: none;
-    border-radius: 2px;
-    padding: 0 5px;
-} */
-
-/* .design-area {
-    height: 75px;
-}
-
-textarea {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.checkbox {
-    padding: 10px;
-    line-height: 30px;
-}
-
-input[type=checkbox] {
-    margin: 10px 10px 0;
-    line-height: normal;
-    width: 18px;
-    height: 18px;
-} */
-
-/* .button-right {
-    text-align: right;
-    padding: 10px 0;
-}
-
-.send-button {
-    font-family: 'Reenie Beanie', cursive;
-    letter-spacing: 2px;
-    background-color: #4a474e;
-    color: #f7e6de;
-    border: none;
-    font-size: 130%;
-    text-align: center;
-    width: 90px;
-    height: 40px;
-    border-radius: 2%;
-    transition-duration: 0.5s;
-}
-
-.send-button:hover {
-    background-color: #f7e6de;
-    color: #4a474e;
-} */
-
-/* Thank you page */
-.thankyou {
-    font-size: 120%;
-    text-align: center;
-}
-
-
 /* Footer Section */
 .footer-bg {
     background-color: #f7e6de;
@@ -570,45 +456,3 @@ input[type=checkbox] {
         font-size: 180%;
         padding: 30px;
     }
-
-    /* Contact page */
-    /* #getintouch {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px 30px;
-        margin-bottom: 30px;
-    }
-
-    #contact-text h2 {
-        font-size: 450%;
-    }
-
-    #contact-form {
-        flex: 1;
-        max-width: 600px;
-    }
-
-    .form-row {
-        display: flex;
-    }
-
-    .input-group {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        margin: 10px 5px;
-    } */
-}
-
-/* Large devices (laptops and desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-
-   
-}
-
-/* Large devices (laptops and desktops, 1500px and up) */
-@media screen and (min-width: 1500px) {
-
-    
-}

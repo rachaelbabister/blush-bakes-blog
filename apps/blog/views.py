@@ -62,6 +62,12 @@ def recipe_detail(request, slug):
     comment_count = recipe.comments.filter(approved=True).count()
     recipe.comments.filter(approved=True).count()
 
+    # Check if user has favourited a recipe
+    is_favourited = False
+    if request.user.is_authenticated:
+        is_favourited = request.user in recipe.favourite_recipes.all()
+
+    # Adding comments to recipe posts
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -84,6 +90,7 @@ def recipe_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "is_favourited": is_favourited,
         },
     )
 

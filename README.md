@@ -386,6 +386,7 @@ In the TESTING file linked below, you can see the tests and fixes I did manage t
 - [DEV](https://dev.to/earthcomfy/django-user-profile-3hik) - help with linking a register page with a profile page.
 - [YouTube](https://www.youtube.com/watch?v=S9-Bt1JgRjQ) - tutorial on category dropdown menu and pages.
 - [Bootstrap](https://getbootstrap.com/docs/5.1/components/navbar/) - help with dropdown menus.
+- [Publii](https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html) - to help with scrolling issues for Jump to Recipe button
 - Code Institute Slack Channel
 - I also used the 'I Think Therefore I Blog walkthrough to help with some setup and coding.
 - ChatGPT - to explain certain code and bugs I didn't understand.
