@@ -39,7 +39,7 @@
 <div class="container">
     <div class="row g-0">
         <div class="col-md-6 offset-md-6 text-end">
-            <a href="#recipe-start" class="page-buttons jump-button">Jump to Recipe</a>
+            <a href="#recipe-start" id="jumptoRecipe()" class="page-buttons jump-button">Jump to Recipe</a>
         </div>
     </div>
 </div>
@@ -51,8 +51,9 @@
                 <p class="card-text">
                     {{ recipe.blurb | safe }}
                     <hr>
-                    <span id="recipe-start"></span>
-                    {{ recipe.recipe_content | safe }}
+                    <span id="recipe-start">
+                        {{ recipe.recipe_content | safe }}
+                    </span>
                 </p>
             </div>
         </div>
