@@ -384,7 +384,8 @@ In the TESTING file linked below, you can see the tests and fixes I did manage t
 - [W3Schools](https://www.w3schools.com) - helped with JavaScript for scroll to top button.
 - [Stack Overflow](https://stackoverflow.com/) & [Django](https://docs.djangoproject.com/) - help with form template amends.
 - [DEV](https://dev.to/earthcomfy/django-user-profile-3hik) - help with linking a register page with a profile page.
-- [YouTube](https://www.youtube.com/watch?v=S9-Bt1JgRjQ) - tutorial on category drop down menu and pages.
+- [YouTube](https://www.youtube.com/watch?v=S9-Bt1JgRjQ) - tutorial on category dropdown menu and pages.
+- [Bootstrap](https://getbootstrap.com/docs/5.1/components/navbar/) - help with dropdown menus.
 - Code Institute Slack Channel
 - I also used the 'I Think Therefore I Blog walkthrough to help with some setup and coding.
 - ChatGPT - to explain certain code and bugs I didn't understand.

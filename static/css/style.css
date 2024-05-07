@@ -83,6 +83,10 @@ header a {
     border: none;
 }
 
+.navbar {
+    background-color: #ffffff;
+}
+
 .navbar-toggler:focus {
     box-shadow: none;
 }
