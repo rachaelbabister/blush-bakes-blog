@@ -35,6 +35,7 @@
         </div>
     </div>
 </div>
+<!-- Jump to recipe button -->
 <div class="container">
     <div class="row g-0">
         <div class="col-md-6 offset-md-6 text-end">
@@ -48,8 +49,10 @@
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
                 <p class="card-text">
+                    {{ recipe.blurb | safe }}
+                    <hr>
                     <span id="recipe-start"></span>
-                    {{ recipe.content | safe }}
+                    {{ recipe.recipe_content | safe }}
                 </p>
             </div>
         </div>

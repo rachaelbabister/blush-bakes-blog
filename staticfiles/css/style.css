@@ -83,6 +83,10 @@ header a {
     border: none;
 }
 
+.navbar {
+    background-color: #ffffff;
+}
+
 .navbar-toggler:focus {
     box-shadow: none;
 }
@@ -289,6 +293,10 @@ main {
 .favs {
     padding-top: 3px;
     line-height: 25px;
+}
+
+#recipe-start {
+    /* margin-top: 50px; */
 }
 
 /* Sign Up, Logout & Account styles */
@@ -522,7 +530,7 @@ input[type=checkbox] {
 
 
 /* Footer Section */
-#footer {
+.footer-bg {
     background-color: #f7e6de;
 }
 
