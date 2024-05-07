@@ -1,13 +1,12 @@
 # BLUSH BAKES BY RACH | RECIPE BLOG
 
-
 Welcome to the Recipe Blog by Blush Bakes by Rach. Utilising the existing branding and style from my business website, I've built this blog with a focus on elegant simplicity, wanting to share my baking passion with a wider audience.
 
-Using a combination of HTML, CSS, JavaScript, and Python using the Django framework, this blog offers a responsive experience across all devices, whether on your desktop, tablet, or phone -  the content is easy to navigate and visually appealing.
+Using a combination of HTML, CSS, JavaScript, and Python using the Django framework, this blog offers a responsive experience across all devices, whether on your desktop, tablet, or phone - the content is easy to navigate and visually appealing.
 
 As a visitor to the site, you'll find a diverse selection of baking recipes, ranging from cakes and cupcakes to biscuits and brownies. You're invited to register an account, enabling you to engage with the community by commenting on recipes and sharing your own baking experiences.
 
-One of the highlights of this blog is the ability to save your favourite recipes directly to your profile, giving easy access to the recipes at a later date.
+One of the highlights of this blog is the ability to save your favourite recipes directly to your profile, giving easy access to the recipes later.
 
 ![Blush Bakes by Rach Recipe Blog shown on a range of devices, using amiresponsive(https://ui.dev/amiresponsive)](readmefiles/images/ux/responsivedesigns.jpg)
 
@@ -18,7 +17,6 @@ LIVE SITE
 GITHUB PAGES
 
 [You can view the GitHub code pages here.](https://github.com/rachaelbabister/blush-bakes-blog)
-
 
 ---
 
@@ -32,6 +30,7 @@ GITHUB PAGES
       - [First Time Visitor Goals](#first-time-visitor-goals)
       - [Returning Visitor Goals](#returning-visitor-goals)
       - [Frequent Visitor Goals](#frequent-visitor-goals)
+      - [Agile Methodology](#agile-methodology)
   - [Design](#design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
@@ -65,7 +64,7 @@ GITHUB PAGES
 
 ### User Stories
 
-Blush Bakes by Rach is a company run by cake artist, Rachael Babister. This website is dedicated to sharing delightful baking recipes; whether you're a seasoned baker or just starting out, you'll find an array of mouth-watering recipes for cakes, cupcakes, biscuits, brownies, and more. Rachael wants to share her recipes with the baking community, enabling users to comment and share their experiences with the recipes, as well as saving their favourites to their profile page in order to come back to them at a later date.
+Blush Bakes by Rach is a company run by cake artist, Rachael Babister. This website is dedicated to sharing delightful baking recipes, whether you're a seasoned baker or just starting out, you'll find an array of mouth-watering recipes for cakes, cupcakes, biscuits, brownies, and more. Rachael wants to share her recipes with the baking community, enabling users to comment and share their experiences with the recipes, as well as saving their favourites to their profile page to come back to them at a later date.
 
 #### Client Goals
 
@@ -122,7 +121,7 @@ Font Awesome is also used for the 'back to top' arrow on the website and the com
 
 ### Imagery
 
-The type of imagery used on the website is all photography. The logo was designed by me, and the main header photo was taken by myself. The recipe photo's have been taken from Google search and are referenced in Credits.
+The type of imagery used on the website is all photography. The logo was designed by me, and the main header photo was taken by myself. The recipe photos have been taken from Google search and are referenced in Credits.
 
 ### Wireframes
 
@@ -161,7 +160,7 @@ Various data models were drawn out before creating the actual models, to serve a
 - Using secure coding techniques such as {%%} and @login_required helps to restrict unauthorised actions on the site, ensuring certain functions are only seen by authorised users.
 
 #### Input Validation
-- A plus to using Django is utilising their built-in form validation framework. The system can check for exising users, required fields and password confirmation, triggering errors if anything doesn't meet the requirements.
+- A plus to using Django is utilising their built-in form validation framework. The system can check for existing users, required fields and password confirmation, triggering errors if anything doesn't meet the requirements.
 
 #### User Feedback
 - Flash messages are used to feedback to a user when a certain action has been processed - whether successful or not. The user has a much more improved experience, feeling confident they know the processes of what is happening with their actions on the site.
@@ -180,7 +179,6 @@ Various data models were drawn out before creating the actual models, to serve a
 - There is a 'back to top' button for longer pages in the bottom right corner, making it easier for users to scroll to the top of the page.
 
 ![Blush Bakes by Rach Recipe Blog shown on a range of devices, using amiresponsive(https://ui.dev/amiresponsive)](readmefiles/images/ux/responsivedesigns.jpg)
-
 
 #### Home Page
 
@@ -212,7 +210,7 @@ Various data models were drawn out before creating the actual models, to serve a
 
 #### User Account
 
-- SIGN UP: Users are able to fill in their details to create a user profile on the website, in order to be able to make comments and add favourites.
+- SIGN UP: Users can fill in their details to create a user profile on the website, in order to be able to make comments and add favourites.
 
 ![Sign Up](readmefiles/images/screenshots/signup.png)
 
@@ -220,7 +218,7 @@ Various data models were drawn out before creating the actual models, to serve a
 
 ![Sign In](readmefiles/images/screenshots/signin.png)
 
-- PROFILE PAGE: Users can access their profile page in order to view their favourite recipes and see their personal information. They also have the ability to delete the recipes listed in their favourites.
+- PROFILE PAGE: Users can access their profile page to view their favourite recipes and see their personal information. They also have the ability to delete the recipes listed in their favourites.
 
 ![Profile](readmefiles/images/screenshots/profileinfo.png)
 ![Delete Favourites ](readmefiles/images/screenshots/favourites-delete.png)
@@ -230,7 +228,7 @@ Various data models were drawn out before creating the actual models, to serve a
 ![Flash Messages](readmefiles/images/screenshots/flashmessages.png)
 ![Flash Messages](readmefiles/images/screenshots/flashmessages2.png)
 
-- SIGN OUT: Users can use the sign out button in the main nav bar to sign out of their account. They are asked to confirm if they would like to sign out, or return back to the home page if they want to stay logged in.
+- SIGN OUT: Users can use the sign out button in the main nav bar to sign out of their account. They are asked to confirm if they would like to sign out, or return to the home page if they want to stay logged in.
 
 ![Sign Out](readmefiles/images/screenshots/signout.png)
 
@@ -240,7 +238,7 @@ Various data models were drawn out before creating the actual models, to serve a
 
 ![Recipe Header](readmefiles/images/screenshots/recipe-header.png)
 
-- RECIPE DETAILS: Underneath the image are the recipes ingredients and method. Some recipes may have information paragraphs from the author, and so to help with user accessibility, there is a Jump to Recipe button so it auto scrolls to the actual recipe.
+- RECIPE DETAILS: Underneath the image are the recipes ingredients and method. Some recipes may have information paragraphs from the author, and so to help with user accessibility, there is a Jump to Recipe button, so it auto scrolls to the actual recipe.
 
 ![Recipe Details](readmefiles/images/screenshots/recipe-details.png)
 
@@ -248,7 +246,7 @@ Various data models were drawn out before creating the actual models, to serve a
 
 ![Heart Icon](readmefiles/images/screenshots/favourites-heart.png)
 
-- COMMENTS: Comments appear underneath the recipe details. Once a comment has been approved by admin, anyone can view the comments. When they are under approval, only the user who posted the comment can see it, and is able to manage that comment with an edit or delete button. You can only make comments when you are logged in. If a user tries to delete a comment, they are asked to confirm and are able to cancel the delete should they wish.
+- COMMENTS: Comments appear underneath the recipe details. Once a comment has been approved by admin, anyone can view the comments. When they are under approval, only the user who posted the comment can see it and is able to manage that comment with an edit or delete button. You can only make comments when you are logged in. If a user tries to delete a comment, they are asked to confirm and can cancel the delete should they wish.
 
 ![Comments](readmefiles/images/screenshots/comments.png)
 ![Manage Comments](readmefiles/images/screenshots/comment-manage.png)
@@ -266,13 +264,13 @@ Various data models were drawn out before creating the actual models, to serve a
 - A star rating on the recipes for users to rate a recipe, and for other users to see what the star rating is.
 - A toggle of metric/imperial measurements on each recipe.
 - Instructional videos for users to follow along.
-- A printable versin of the recipe.
-- Nutrional values for the recipes.
+- A printable version of the recipe.
+- Nutritional values for the recipes.
 - The ability for a user to adjust ingredient quantities based on the size of the bake they want to do.
 - Email subscription, with unsubscribe options too.
 - A forgotten/reset password function.
 - A search by keyword function.
-- To be able to share the recipes on a users social media pages.
+- To be able to share the recipes on a user’s social media pages.
 
 ### Accessibility
 
@@ -305,7 +303,7 @@ I have tried to ensure the site has been made as accessible as possible by:
 - Codeanywhere - cross platform cloud IDE to deploy workspace environment to Github.
 - Cloudinary - cloud based storage for images.
 - Font Awesome - to use icons on the website.
-- Github - to store and dislay all files and assets for the website.
+- Github - to store and display all files and assets for the website.
 - Google Fonts - to import the fonts used on the website.
 - Google Image Search - to find images for the recipes.
 - Google Dev Tools - to troubleshoot, test and solve issues with any styling.
@@ -315,21 +313,21 @@ I have tried to ensure the site has been made as accessible as possible by:
 - Lucid - to create my Data Models.
 - Photoshop 2023 - to optimise images for the website.
 - W3C Markup Validator - to check the source code of my html files for any bugs.
-- W3C CSS Validator - to check the source code of my css file for any bugs.
+- W3C CSS Validator - to check the source code of my CSS file for any bugs.
 
 ### Deployment
 
 #### Environment & Settings
 
 - In your IDE open your env.py file or create one in the main directory if it hasn't been created for you.
-- Having created your cloud based database, add the DATABASE_URL value and a SECRET_KEY value to the env.py file.
-- Open the settings.py file iand import the env.py file and the DATABASE_URL and SECRETKEY file paths.
+- Having created your cloud-based database, add the DATABASE_URL value and a SECRET_KEY value to the env.py file.
+- Open the settings.py file and import the env.py file and the DATABASE_URL and SECRETKEY file paths.
 - Install Django and add to requirements.txt.
 - Create your project.
 - Add the STATIC files settings.
 - Create a file called Procfile (with a capital P) in the main directory,
-- For cloud based image storage, add Cloudinary URL to env.py
-- Add cloudinary libraries to INSTALLED APPS.
+- For cloud-based image storage, add Cloudinary URL to env.py
+- Add Cloudinary libraries to INSTALLED APPS.
 - Add your IDE workspace and Heroku to ALLOWED_HOSTS.
 - Make migrations and migrate.
 - Before you add, commit & push your files to GitHub, ensure DEBUG is set to False in your settings.py file.
@@ -339,12 +337,12 @@ I have tried to ensure the site has been made as accessible as possible by:
 - Login or create an account on Heroku.com. Click 'New' and then 'Create New App'.
 - Give your project a unique name and select a region, then click 'Create App'.
 - Connect your Heroku project to your GitHub repository. Under deployment you can choose GitHub, find the relevant one and click 'Connect.
-- Once connected, go to the Settings tab and click on 'Reveal Confid Vars'. Add the environment key & value variables used above in your env.py file (CLOUDINARY_URL, DATABASE_URL & SECRET_KEY).
+- Once connected, go to the Settings tab and click on 'Reveal Config Vars'. Add the environment key & value variables used above in your env.py file (CLOUDINARY_URL, DATABASE_URL & SECRET_KEY).
 - Next add DISABLE_COLLECTSTATIC and add 1 if this is to be disabled to prevent errors, or 0 if the app is in a state where errors will not be generated.
 - Click on Buildpack further down and click Add Buildpack to confirm Heroku buildpack is present.
 - Navigate to the Deploy section, click on Github for the deployment method and confirm.
 - Search for your repository name and click connect.
-- At the bottom of the deploy section, make sure you are connected to the main brance and then click Deploy Branch.
+- At the bottom of the deploy section, make sure you are connected to the main branch and then click Deploy Branch.
 - You can then view your live site.
 
 ### Local Development
@@ -369,10 +367,9 @@ To clone a repository on Github, follow these steps:
 
 - - -
 
-
 ## Testing
 
-I have learnt from this project to ensure I start my TESTING file from the begining in future. I continually test the site as I go along and have fixed many small issues that didn't work straight away, but unfortunately these weren't catalogued.
+I have learnt from this project to ensure I start my TESTING file from the beginning in future. I continually test the site as I go along and have fixed many small issues that didn't work straight away, but unfortunately these weren't catalogued.
 
 In the TESTING file linked below, you can see the tests and fixes I did manage to catalogue.
   
@@ -387,7 +384,7 @@ In the TESTING file linked below, you can see the tests and fixes I did manage t
 - [W3Schools](https://www.w3schools.com) - helped with JavaScript for scroll to top button.
 - [Stack Overflow](https://stackoverflow.com/) & [Django](https://docs.djangoproject.com/) - help with form template amends.
 - [DEV](https://dev.to/earthcomfy/django-user-profile-3hik) - help with linking a register page with a profile page.
-- [YouTube](https://www.youtube.com/watch?v=S9-Bt1JgRjQ) - tuturial on category drop down menu and pages.
+- [YouTube](https://www.youtube.com/watch?v=S9-Bt1JgRjQ) - tutorial on category drop down menu and pages.
 - Code Institute Slack Channel
 - I also used the 'I Think Therefore I Blog walkthrough to help with some setup and coding.
 - ChatGPT - to explain certain code and bugs I didn't understand.
@@ -398,7 +395,7 @@ The recipes were created by ChatGPT in the form of a JSON file for easy importin
 
 ### Media
 
-The logo was designed by myself and the header strip photo was taken by me. Icons used on the site are Font Awesome.
+The logo was designed by myself, and the header strip photo was taken by me. Icons used on the site are Font Awesome.
 
 #### Recipe Card Images
 
@@ -406,7 +403,7 @@ The logo was designed by myself and the header strip photo was taken by me. Icon
 - [Baking with Granny](https://bakingwithgranny.co.uk/recipe/banana-loaf/) - Banana Bread
 - [All Recipes](https://www.allrecipes.com/recipe/157877/vanilla-cupcake/) - Cupcakes
 - [BBC Good Food](https://www.bbcgoodfood.com/recipes/classic-victoria-sandwich-recipe) - Victoria sponge
-- [Kidspot](https://www.kidspot.com.au/kitchen/recipes/choc-chip-cookies-recipe/oz1txtz2) - Chocolage Chip Biscuits
+- [Kidspot](https://www.kidspot.com.au/kitchen/recipes/choc-chip-cookies-recipe/oz1txtz2) - Chocolate Chip Biscuits
 - [realfood Tesco](https://realfood.tesco.com/recipes/spiced-apple-pie.html) - Apple Pie
 - [realfood Tesco](https://realfood.tesco.com/recipes/vegan-chocolate-fudge-cake.html) - Fudge Cake
 - [Taste](https://www.taste.com.au/recipes/new-york-cheesecake-3/94db8765-15d6-46c3-be3a-3a2aa119b5e6) - Cheesecake
@@ -420,7 +417,7 @@ The logo was designed by myself and the header strip photo was taken by me. Icon
 
 I wouldn't have been able to complete this project without the help of the Slack Community! Special mention to Craig Hudson who stayed up until 2am working through some code issues with me!
 
-Code Institute Tutor Support helped me when my database messed up.
+Code Institute Tutor Support: Sean helped me when my database messed up, and John helped sort my JavaScript/Bootstrap issues which had caused all sorts to stop working!
 
 To my friends, who I am constantly asking to check over my website when they have their stuff to do! 
 

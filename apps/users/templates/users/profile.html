@@ -18,7 +18,7 @@
             <h2>User Information</h2>
             <ul class="user-list">
                 <li><strong>Username:</strong> {{ user.username }}</li>
-                <li><strong>Full name:</strong> {{ user.profile.first_name }} {{ user.profile.last_name }}</li>
+                <li><strong>Full name:</strong> {{ user_profile.full_name }}</li>
                 <li><strong>Email address:</strong> {{ user.email }}</li>
                 <li><strong>Member since:</strong> {{ user.date_joined|date:"d F, Y" }}</li>
             </ul>
@@ -47,7 +47,3 @@
 </div>
 
 {% endblock content %}
-
-{% block extras %}
-<script src="{% static 'js/script.js' %}"></script>
-{% endblock %}

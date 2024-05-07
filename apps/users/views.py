@@ -21,11 +21,10 @@ def signup(request):
 
 def profile_view(request, username):
     recipe = get_object_or_404(Recipe, id=recipe_id)
-    print("Recipe ID:", recipe.id)
     user = User.objects.get(username=username)
     user_profile = user.profile
     favourite_recipes = user_profile.favourites.all()
-    return render(request, 'profile.html', {'user': user, 'user_profile': user_profile, 'favourite_recipes': favourite_recipes})       
+    return render(request, 'profile.html', {'user': user, 'user_profile': user_profile, 'favourite_recipes': favourite_recipes})
 
 
 @login_required

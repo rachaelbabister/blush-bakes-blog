@@ -1,6 +1,7 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'profile' as profile_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_logout' as logout_url %}
 
@@ -29,68 +30,66 @@
 </head>
 
 <body>
-    <!-- Header section with Logo and Navigation -->
-    <header class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="{% url 'home' %}">
-            <img class="header-logo" src="{% static 'images/header-logo.webp' %}" width="120" height="120"
-                alt="Blush Bakes by Rach logo">
-        </a>
-
-        <!-- Navbar toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-            aria-controls="navbarContent" aria-expanded="false" aria-label="Menu with links to internal pages">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar content -->
-        <nav class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == home_url %}active{% endif %}"
-                        href="{% url 'home' %}">Home</a>
-                </li>
-                <li class="nav-item dropdown show">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Recipes
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      {% for category in category_list %}
-                        <a class="dropdown-item" href="{% url 'category' category %}">
-                        {{ category.name|title }}
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <!-- Logo & Toggle Nav -->
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img class="header-logo" src="{% static 'images/header-logo.webp' %}" width="120" height="120"
+                    alt="Blush Bakes by Rach logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Main Site Nav -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}"
+                            href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Recipes
                         </a>
-                      {% endfor %}
-                    </div>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-            
-            <!-- Authentication-related links -->
-            <ul class="navbar-nav ms-auto">
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register' %}">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
-                </li>
-                {% endif %}
-            </ul>
-        </nav>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            {% for category in category_list %}
+                            <a class="dropdown-item" href="{% url 'category' category %}">
+                                {{ category.name|title }}
+                            </a>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Authentication-related Nav -->
+                <div class="d-flex">
+                    <ul class="navbar-nav">
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == profile_url %}active{% endif %}"
+                                href="{% url 'profile' %}">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
         {% if user.is_authenticated %}
         <div class="flex-shrink-0 ms-3">
             <p class="hello m-3">Hello {{ user }}</p>
         </div>
         {% endif %}
-    </header>
+    </nav>
 
     <!-- Main Section -->
     <main>
@@ -104,7 +103,7 @@
             </div>
         </section>
 
-        <!-- displaying Django messages -->
+        <!-- Displaying Django messages -->
         <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
@@ -151,16 +150,21 @@
             {% endblock copyright %}
         </p>
     </footer>
+
     <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/c2f2557f2c.js" crossorigin="anonymous"></script>
 
-    {% block extras %}
-
     <!-- JavaScript jQuery, Popper, Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 
+    <!-- Custom JS -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+    {% block extras %}
     {% endblock %}
 </body>
 
