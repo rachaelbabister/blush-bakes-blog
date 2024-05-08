@@ -4,7 +4,7 @@ Welcome to the Recipe Blog by Blush Bakes by Rach. Utilising the existing brandi
 
 Using a combination of HTML, CSS, JavaScript, and Python using the Django framework, this blog offers a responsive experience across all devices, whether on your desktop, tablet, or phone - the content is easy to navigate and visually appealing.
 
-As a visitor to the site, you'll find a diverse selection of baking recipes, ranging from cakes and cupcakes to biscuits and brownies. You're invited to register an account, enabling you to engage with the community by commenting on recipes and sharing your own baking experiences.
+As a visitor to the site, you'll find a range of different baking recipes, ranging from cakes and cupcakes to biscuits and brownies. There is a link to register for an account, enabling you to engage with the community by commenting on recipes and sharing your own baking experiences.
 
 One of the highlights of this blog is the ability to save your favourite recipes directly to your profile, giving easy access to the recipes later.
 
@@ -259,8 +259,9 @@ Various data models were drawn out before creating the actual models, to serve a
 
 ### Future Implementations
 
-- Update or delete a user profile. (this should have been included in this design iteration, but time didn't allow)
-- A contact form for users to get in touch. (this should have been included in this design iteration, but time didn't allow)
+- Update or delete a user profile. (I would've liked to have included this in this design iteration, but time didn't allow.)
+- A contact form for users to get in touch. (I would've liked to have included this in this design iteration, but time didn't allow.)
+- An About page to give the user more information about the blog and the company, with a link to the main Blush Bakes by Rach website.
 - A star rating on the recipes for users to rate a recipe, and for other users to see what the star rating is.
 - A toggle of metric/imperial measurements on each recipe.
 - Instructional videos for users to follow along.
@@ -369,9 +370,9 @@ To clone a repository on Github, follow these steps:
 
 ## Testing
 
-I have learnt from this project to ensure I start my TESTING file from the beginning in future. I continually test the site as I go along and have fixed many small issues that didn't work straight away, but unfortunately these weren't catalogued.
+I continually tested the site throughout the build process and fixed any issues that didn't work straight away.
 
-In the TESTING file linked below, you can see the tests and fixes I did manage to catalogue.
+Testing and bug fixes can be found in the file below.
   
 [TESTING.md file](TESTING.md)
 
@@ -379,14 +380,15 @@ In the TESTING file linked below, you can see the tests and fixes I did manage t
 
 ## Credits
 
-### Code Used
+### Code Used / Help Resources
 
 - [W3Schools](https://www.w3schools.com) - helped with JavaScript for scroll to top button.
 - [Stack Overflow](https://stackoverflow.com/) & [Django](https://docs.djangoproject.com/) - help with form template amends.
 - [DEV](https://dev.to/earthcomfy/django-user-profile-3hik) - help with linking a register page with a profile page.
 - [YouTube](https://www.youtube.com/watch?v=S9-Bt1JgRjQ) - tutorial on category dropdown menu and pages.
 - [Bootstrap](https://getbootstrap.com/docs/5.1/components/navbar/) - help with dropdown menus.
-- [Publii](https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html) - to help with scrolling issues for Jump to Recipe button
+- [Publii](https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html) - to help with scrolling issues for Jump to Recipe button.
+- [Learn Django](https://learndjango.com/) - helped with many Django obstacles I bumped into along the way.
 - Code Institute Slack Channel
 - I also used the 'I Think Therefore I Blog walkthrough to help with some setup and coding.
 - ChatGPT - to explain certain code and bugs I didn't understand.
@@ -417,9 +419,11 @@ The logo was designed by myself, and the header strip photo was taken by me. Ico
   
 ### Acknowledgments
 
-I wouldn't have been able to complete this project without the help of the Slack Community! Special mention to Craig Hudson who stayed up until 2am working through some code issues with me!
+I wouldn't have been able to complete this project without the help of the Slack Community. Special mention to Craig Hudson who stayed up until 2am working through some code issues with me!
 
-Code Institute Tutor Support: Sean helped me when my database messed up, and John helped sort my JavaScript/Bootstrap issues which had caused all sorts to stop working!
+Code Institute Tutor Support: Sean helped me when my database messed up, and John helped sort my JavaScript/Bootstrap issues which had caused all sorts to stop working just at the point of getting close to submission.
+
+Code Institue Student Support for their help and understanding when I needed an extension for this project due to personal life blocks.
 
 To my friends, who I am constantly asking to check over my website when they have their stuff to do! 
 
