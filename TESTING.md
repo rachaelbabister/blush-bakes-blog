@@ -61,47 +61,50 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 
 #### Desktop Results
 
-Desktop results had good high figures - all in the green. Happy to see Accessibility is 100.
+I came across some issues with Cloudinary causing low scores on Best Practices. I added in some code to ensure images were secure in my settings.py and when run again, this did improve the scores. Interestingly, when Lighthouse is run in incognito mode, the score improves on some pages. I have included both below.
 
-- index.html
-  
-![index.html](assets/images/readme-images/desk-lighthouse-index.png)
+- Home Page
+  - Public
+![Public](readmefiles/images/testing/home-lighthouse-public.png)
+  - Incognito
+![Incognito](readmefiles/images/testing/home-lighthouse-incognito.png)
 
-- gallery.html
-  
-![gallery.html](assets/images/readme-images/desk-lighthouse-gallery.png)
+- Recipes/Category
+  - Public
+![Public](readmefiles/images/testing/recipes-lighthouse-public.png)
+  - Incognito
+![Incognito](readmefiles/images/testing/recipes-lighthouse-incognito.png)
 
-- contact.html
-  
-![contact.html](assets/images/readme-images/desk-lighthouse-contact.png)
+- Register page
+  - Public  
+![Public](readmefiles/images/testing/register-lighthouse-public.png)
 
-- thankyou.html
-  
-![thankyou.html](assets/images/readme-images/desk-lighthouse-thankyou.png)
-
-### Mobile Results
-
-The accessibility on the index page came out lower than hoped, but this check was taken before the above validator bugs were fixed.
-
-- index.html
-  
-![index.html](assets/images/readme-images/lighthouse-index.png)
+- Profile page
+  - Public  
+![Public](readmefiles/images/testing/profile-lighthouse-public.png)
 
 
-The results after the bugs and errors had all been fixed were as follows:
+#### Mobile Results
 
-- index.html
-  
-![index.html](assets/images/readme-images/lighthouse-index2.png)
+Unfortunately Performance had a low score on mobile results. Some the issues were to do with the Cloudinary images, and other images which could have a lower image size for mobile viewing. 
 
-- gallery.html
-  
-![gallery.html](assets/images/readme-images/lighthouse-gallery.png)
+- Home
+  - Public
+![Public](readmefiles/images/testing/mobile-home-public.png)
+  - Incognito
+![Public](readmefiles/images/testing/mobile-home-incognito.png)
 
-- contact.html
-  
-![contact.html](assets/images/readme-images/lighthouse-contact.png)
+- Recipes/Category
+  - Public
+![Public](readmefiles/images/testing/mobile-home-public.png)
+  - Incognito
+![Incognito](readmefiles/images/testing/mobile-home-public.png)
 
-- thankyou.html
-  
-![thankyou.html](assets/images/readme-images/lighthouse-thankyou.png)
+- Register page
+  - Public  
+![Public](readmefiles/images/testing/mobile-register-public.png)
+
+- Profile page
+  - Public  
+![Public](readmefiles/images/testing/mobile-profile-public.png)
+
