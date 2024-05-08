@@ -12,9 +12,12 @@ LIVE SITE
   - [CONTENTS](#contents)
   - [AUTOMATED TESTING](#automated-testing)
     - [W3C Validator](#w3c-validator)
+    - [JSHint Validator](#jshint-validator)
     - [Lighthouse](#lighthouse)
-    - [Desktop Results](#desktop-results)
-    - [Mobile Results](#mobile-results)
+      - [Desktop Results](#desktop-results)
+      - [Mobile Results](#mobile-results)
+  - [MANUAL TESTING](#manual-testing)
+    - [Function Testing](#function-testing)
 
 Testing was continually carried throughout the build process of this website. There were some User Stories that tested my own patience and resilience during this project (!), and required more fixing than others, which did mean that time didn't allow for other User Stories to get completed, eg. Contact page.
 
@@ -107,6 +110,8 @@ Unfortunately Performance had a low score on mobile results. Some the issues wer
 - Profile page
   - Public  
 ![Public](readmefiles/images/testing/mobile-profile-public.png)
+
+## MANUAL TESTING
 
 ### Function Testing
 
