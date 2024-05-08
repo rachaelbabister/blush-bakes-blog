@@ -7,16 +7,16 @@ from .models import UserProfile
 class SignUpForm(UserCreationForm):
     username = forms.CharField(max_length=100, required=True)
     email = forms.EmailField(required=True)
-    password = forms.CharField(max_length=50, widget=forms.PasswordInput)
+    password1 = forms.CharField(max_length=50, widget=forms.PasswordInput)
     password2 = forms.CharField(max_length=50, widget=forms.PasswordInput, label='Confirm password')
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        user.set_password(self.cleaned_data["password"])
+        user.set_password(self.cleaned_data["password1"])
         user.save()
         user_profile, created = UserProfile.objects.get_or_create(user=user)
         user_profile.email = user.email
