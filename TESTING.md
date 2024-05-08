@@ -22,7 +22,7 @@ With that in mind, the site doesn't fully reflect what was built in the wirefram
 
 Chrome Developer Tools has been extremely useful to bug the code and inform me where things may have been going wrong.
 
-I used the W3C Validator to check my HTML and CSS source code, JSHint to check any JavaScript code, CI Python Linter for Python code, and also LightHouse within Chrome Developer Tools to test the performance and accessibility. These are explained in more detail below.
+I used the W3C Validator to check my HTML and CSS source code, JSHint to check any JavaScript code, and also LightHouse within Chrome Developer Tools to test the performance and accessibility. These are explained in more detail below.
 
 - - -
 
@@ -46,6 +46,13 @@ I used the W3C Validator to check my HTML and CSS source code, JSHint to check a
   - Not able to use 'button' element as a descendant of 'a' element. FIX - remove 'button' tag. 
 - [CSS stylesheet](readmefiles/images/testing/css-validator.png)
   - Property 'justify' doesn't exist on .jump-button. FIX - .jump-button class was removed from stylesheet after reviewing it wasn't adding any style to the button, and the recipe_detail.html template was amended to remove any instances of the class.
+  - Also a parse error. FIX - added a missing '}' bracket to the end of the stylesheet.
+
+### JSHint Validator
+
+- [script.js](readmefiles/images/testing/javascript-validator.png)
+  - A missing semicolon - after reviewing the script file, I'm not sure where I would add a missing semicolon so this has been left.
+  - Undefined and unused variables - these are used within the template pages of the site.
 
 - - -
 

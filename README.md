@@ -300,7 +300,6 @@ I have tried to ensure the site has been made as accessible as possible by:
 - Am I Responsive? - to showcase the website on different devices.
 - Balsamiq - to create Wireframes.
 - ChatGPT - to create a JSON file of all the recipes.
-- CI Pyton Linter - to check custom written python code for errors.
 - Codeanywhere - cross platform cloud IDE to deploy workspace environment to Github.
 - Cloudinary - cloud based storage for images.
 - Font Awesome - to use icons on the website.
