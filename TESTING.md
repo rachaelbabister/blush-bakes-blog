@@ -30,24 +30,22 @@ I used the W3C Validator to check my HTML and CSS source code, JSHint to check a
 
 ### W3C Validator
 
-[W3C](https://validator.w3.org/) was used to validate the source code for both the html and css on all pages of the website. 
+[W3C](https://validator.w3.org/) was used to validate the source code for both the html and css on all pages of the website. Apart from the issues detailed below, there were no other errors or warnings to show.
 
 
-- [index.html](readmefiles/images/testing/index-validator.png)
+- [Home page](readmefiles/images/testing/index-validator.png)
   - Not able to use an 'a' element as a child element of 'ul'. FIX - wrapped the 'a' within an 'li' element.
-- [gallery.html](assets/images/readme-images/gallery-validator.png)
-  - Logo image tag was changed to img.
-  - Button code was amended.
-  - Changed sections to divs.
-  - Removed aria-label
-- [contact.html](assets/images/readme-images/contact-validator.png)
-  - Logo image tag was changed to img.
-  - Sections were changed to divs.
-- [thankyou.html](assets/images/readme-images/thankyou-validator.png) 
-  - Logo image tag was changed to img.
-  - Sections were changed to divs.
-- style.css 
-  - No screenshot, however there was a missing curly bracket, and a parse error with a display:block class that wasn't related to anything. This was removed.
+- Recipe Pages
+- [Error 1](readmefiles/images/testing/recipepages-validator.png)
+  - Elements 'h2', 'p' and 'hr' now allowed as a child element of 'span'. FIX - changed the 'span' element within recipe_detail.html to a 'div'.
+- [Error 2](readmefiles/images/testing/recipepages-validator2.png)
+  - Tag errors. FIX - change 'p' tag to a 'div' and remove stray 'div' end tag.
+- [Category pages](readmefiles/images/testing/category-validator.png)
+  - Trailing slash on void element. FIX - remove the trailing slash from 'hr'.
+- [Logout page](readmefiles/images/testing/logout-validator.png) 
+  - Not able to use 'button' element as a descendant of 'a' element. FIX - remove 'button' tag. 
+- [CSS stylesheet](readmefiles/images/testing/css-validator.png)
+  - Property 'justify' doesn't exist on .jump-button. FIX - .jump-button class was removed from stylesheet after reviewing it wasn't adding any style to the button, and the recipe_detail.html template was amended to remove any instances of the class.
 
 - - -
 

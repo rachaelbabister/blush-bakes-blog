@@ -162,7 +162,7 @@ main {
     border: none;
     transition-duration: 0.5s;
     margin-bottom: 20px;
-    padding: .325rem .50rem;
+    padding: 8px 10px;
     font-size: 80%;
 }
 
@@ -170,11 +170,6 @@ main {
 .edit-button:hover {
     color: #4a474e;
     background-color: #f7e6de;
-}
-
-.jump-button {
-    /* margin-top: 40px; */
-    justify: right;
 }
 
 /* Recipe Detail Page */
@@ -393,7 +388,7 @@ main {
     border: none;
     transition-duration: 0.5s;
     margin-bottom: 20px;
-    padding: .325rem .50rem;
+    padding: 8px 10px;
     font-size: 80%;
 }
 
