@@ -54,13 +54,12 @@ I used the W3C Validator to check my HTML and CSS source code, JSHint to check a
   - A missing semicolon - after reviewing the script file, I'm not sure where I would add a missing semicolon so this has been left.
   - Undefined and unused variables - these are used within the template pages of the site.
 
-- - -
 
 ### Lighthouse
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
-### Desktop Results
+#### Desktop Results
 
 Desktop results had good high figures - all in the green. Happy to see Accessibility is 100.
 
